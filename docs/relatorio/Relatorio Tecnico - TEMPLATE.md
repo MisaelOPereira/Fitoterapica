@@ -295,9 +295,13 @@ extraídos de acordo com a seguinte ficha de coleta apresentada abaixo. Após a 
 ## Divisão de Papéis
 
 Misael - Controle de Versionamento e CodeReview
+
 Leonardo - Documentação e Json Server
+
 Pedro - JsonServer e Organização de tarefas Trello
+
 Ana e Gabriel - Desenvolvedores
+
 Raphael - 
 
 
