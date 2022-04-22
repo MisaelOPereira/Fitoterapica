@@ -1,0 +1,12 @@
+.layout > main {
+  height: calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .layout > main {
+    height: 100%;
+  }
+}

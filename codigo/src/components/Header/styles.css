@@ -1,0 +1,156 @@
+.header {
+  height: 70px;
+  width: 100%;
+  background: #4C8A41;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 180px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 28px;
+  font-family: 'Dancing Script', cursive;
+  user-select: none;
+  
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.logo > img {
+  height: 60px;
+  width: 60px;
+  margin-right: 8px;
+}
+.nav-bar {
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar > :is(a, button) {
+  height: 100%;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+
+  transition: background 0.3s;
+}
+
+.nav-bar > :is(a, button):hover {
+  background: #3a702f;
+}
+
+.nav-bar > button > svg {
+  margin-right: 8px;
+}
+
+.nav-bar > div {
+  height: 30px;
+  width: 1px;
+  background: #d4d4d4;
+  margin: 0 4px;
+}
+
+.drawer-burger-button {
+  height: 25px;
+  width: 25px;
+  background: transparent;
+  border: 0;
+
+  position: fixed;
+  top: 22px;
+  right: 20px;
+}
+
+.drawer-burger-button > svg {
+  height: 100%;
+  width: 100%;
+  fill: #fff;
+}
+
+.drawer {
+  height: 100%;
+  background: #4C8A41;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.drawer-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.drawer-top > span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.drawer-top > button {
+  height: 25px;
+  width: 25px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.drawer-top > button > svg {
+  height: 100%;
+  width: 100%;
+  fill: #fff;
+}
+
+.drawer > :is(a, button) {
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+
+  margin-bottom: 30px;
+  
+  transition: background 0.3s;
+}
+
+.drawer > button > svg {
+  margin-right: 8px;
+}
+
+@media(max-width: 1100px) {
+  .header {
+    padding: 0 60px 0 60px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+}
+
+@media(max-width: 500px) {
+  .header {
+    padding: 0;
+  }
+}
