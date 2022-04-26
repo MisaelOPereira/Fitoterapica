@@ -1,11 +1,15 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useAuth } from '../../contexts/AuthContext';
+
 import { Button } from '../Button';
 import { Input } from '../Input';
 
-import './styles.css';
 import { IoClose } from 'react-icons/io5';
+import toast from 'react-hot-toast';
+
+import './styles.css';
 
 interface ModalProps {
   onClose(): void;
@@ -41,12 +45,22 @@ export function SignUpModal({ onClose }: ModalProps) {
   } = useForm<SignUpFormData>({
     resolver: yupResolver(signUpFormSchema),
     shouldFocusError: false
-  })
+  });
+
+  const { signUp } = useAuth();
 
   const handleSignUp: SubmitHandler<SignUpFormData> = data => {
-    console.log(data);
+    try {
+      signUp(data);
 
-    onClose();
+      onClose();
+    } catch (err) {
+      if (err instanceof Error) {
+        toast.error(err.message, {
+          duration: 1000
+        });
+      }
+    }
   }
 
   return (

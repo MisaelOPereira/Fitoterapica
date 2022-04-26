@@ -7,7 +7,7 @@ import { Button } from '../Button';
 import { Input } from '../Input';
 
 import { IoClose } from 'react-icons/io5';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 import './styles.css';
 
@@ -48,52 +48,45 @@ export function SignInModal({ onClose }: ModalProps) {
     } catch (err) {
       if (err instanceof Error) {
         toast.error(err.message, {
-          duration: 4000
+          duration: 1000
         });
       }
     }
   }
 
   return (
-    <>
-      <Toaster
-        position="top-right"
-        reverseOrder={false}
-      />
+    <div className="modal-bg" onClick={onClose}>
+      <div className="form-box" onClick={e => e.stopPropagation()}>
+        <button onClick={onClose}>
+          <IoClose />
+        </button>
 
-      <div className="modal-bg" onClick={onClose}>
-        <div className="form-box" onClick={e => e.stopPropagation()}>
-          <button onClick={onClose}>
-            <IoClose />
-          </button>
+        <h1 className="signin-title">Faça login em sua conta:</h1>
 
-          <h1 className="signin-title">Faça login em sua conta:</h1>
+        <form
+          className="signin-form"
+          onSubmit={handleSubmit(handleSignIn)}
+        >
+          <Input
+            type="email"
+            placeholder="E-mail"
+            autoComplete="email"
+            error={formState.errors.email}
+            {...register('email')}
+          />
 
-          <form
-            className="signin-form"
-            onSubmit={handleSubmit(handleSignIn)}
-          >
-            <Input
-              type="email"
-              placeholder="E-mail"
-              autoComplete="email"
-              error={formState.errors.email}
-              {...register('email')}
-            />
+          <Input
+            type="password"
+            placeholder="Senha"
+            error={formState.errors.password}
+            {...register('password')}
+          />
 
-            <Input
-              type="password"
-              placeholder="Senha"
-              error={formState.errors.password}
-              {...register('password')}
-            />
-
-            <Button type="submit">
-              Entrar
-            </Button>
-          </form>
-        </div>
+          <Button type="submit">
+            Entrar
+          </Button>
+        </form>
       </div>
-    </>
+    </div>
   );
 }
