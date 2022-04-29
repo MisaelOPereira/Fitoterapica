@@ -5,6 +5,7 @@ import { Header } from "../Header";
 import { Footer } from "../Footer";
 
 import './styles.css';
+import { Toaster } from "react-hot-toast";
 
 interface LayoutProps {
   children: React.ReactElement
@@ -37,6 +38,11 @@ export function Layout({ children }: LayoutProps) {
 
   return (
     <div className="layout">
+      <Toaster
+          position="top-right"
+          reverseOrder={false}
+      />
+
       {isModalOpen && <WarningModal onClose={closeModal} />}
 
       <Header />
