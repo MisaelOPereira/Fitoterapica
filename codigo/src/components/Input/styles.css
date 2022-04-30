@@ -1,0 +1,31 @@
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input > input {
+  width: 100%;
+  padding: 12px;
+
+  background: transparent;
+
+  border: 1px solid #727272;
+  border-radius: 6px;
+}
+
+.input > input:focus {
+  border: 2px solid #4C8A41;
+  padding: 11px;
+}
+
+.input > .error {
+  border: 2px solid #E53E3E;
+  padding: 11px;
+}
+
+.input > span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #E53E3E;
+  padding: 4px 0 0 8px;
+}

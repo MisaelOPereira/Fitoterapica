@@ -1,0 +1,56 @@
+.modal-bg {
+  height: 100%;
+  width: 100%;
+  background: #000000ab;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+}
+
+.modal-container {
+  width: 600px;
+  background: #fff;
+  box-shadow: 0px 0px 10px -2px #000000;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+
+  z-index: 20;
+}
+
+.modal-container > svg {
+  height: 60px;
+  width: 60px;
+  fill: #f38a00;
+  z-index: 1;
+}
+
+.modal-container > p {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: justify;
+  margin: 20px 0 40px;
+}
+
+.modal-container > button {
+  width: 300px;
+  background: #d6291d;
+}
+
+.modal-container > button:hover {
+  background: #e63629;
+}
+
+.modal-container > button:active {
+  background: #bb1b0f;
+}
