@@ -1,0 +1,518 @@
+{
+    "plantas": 
+    [
+        {
+            "id": null,
+            "nomes":
+            [
+                {
+                    "cientifico": null,
+                    "comum1": null,
+                    "comum2": null
+                }
+            ],
+            "parte_usada": 
+            [
+                null
+            ],
+            "nacionalidade": null,
+            "regionalidade":
+            [
+                null,
+                null
+            ],
+            "uso_principal": null,
+            "usos":
+            [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "preparo":
+            [
+                null
+            ],
+            "contraindicacaoes":
+            [
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+
+        },
+
+        {
+            "id": 1,
+            "nomes":
+            [
+                {
+                    "cientifico": "Cordia Verbenacea Dc.",
+                    "comum1": "Erva-Baleeira",
+                    "comum2": null
+                }
+            ],
+            "parte_usada": 
+            [
+                "Folhas"
+            ],
+            "nacionalidade": "MAta Atlântica",
+            "regionalidade":
+            [
+                "Nordeste",
+                "Sudeste",
+                "Sul"
+            ],
+            "uso_principal": "Anti-Inflamatório",
+            "usos":
+            [
+                "Cefaleia",
+                "Coqueluche",
+                "Atrito",
+                "Contusão",
+                "Anti-Inflamatorio",
+                null,
+                null
+            ],
+            "preparo":
+            [
+                "Aplicar Compressa Na Região Afetada, Três Vezes Ao Dia."
+            ],
+            "contraindicacaoes":
+            [
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+
+        },
+
+        {
+            "id": 2,
+            "nomes":
+            [
+                {
+                    "cientifico": "Melissa Officinalis L.",
+                    "comum1": "Erva-Cidreira",
+                    "comum2": "Melissa"
+                }
+            ],
+            "parte_usada": 
+            [
+                "Planta Florida",
+                "Folhas"
+            ],
+            "nacionalidade": "África",
+            "regionalidade":
+            [
+                null,
+                null
+            ],
+            "uso_principal": "Carminativo",
+            "usos":
+            [
+                "Estimulante",
+                "Tônico",
+                "Sedativo",
+                "Anti-Histérico",
+                "Antiespasmódico",
+                "Ansiolítico",
+                null
+            ],
+            "preparo":
+            [
+                "Acima De 12 Anos: Tomar 150 ml Do Infuso, 10 A 15 Minutos Após O Preparo, Duas A Três Vezes Ao Dia."
+            ],
+            "contraindicacaoes":
+            [
+                "Hipersensibilidade",
+                "Gravidez",
+                "Baixa Atividade Da Tireoide",
+                null,
+                null
+            ]
+
+        },
+
+        {
+            "id": 3,
+            "nomes":
+            [
+                {
+                    "cientifico": "Polygonum Hydropiperoides Michx",
+                    "comum1": "Erva-De-Bicho",
+                    "comum2": "Pimenteira-d'Água"
+                }
+            ],
+            "parte_usada": 
+            [
+                "Toda A Planta"
+            ],
+            "nacionalidade": "América Do Norte",
+            "regionalidade":
+            [
+                null,
+                null
+            ],
+            "uso_principal": "Anti-Hemorroidal",
+            "usos":
+            [
+                "Erisipela",
+                "Varizes",
+                "Reumatismo",
+                "Anti-hemorroidal",
+                null,
+                null,
+                null
+            ],
+            "preparo":
+            [
+                "Fazer Banho De Assento Três Vezes Ao Dia."
+            ],
+            "contraindicacaoes":
+            [
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+
+        },
+
+        {
+            "id": 4,
+            "nomes":
+            [
+                {
+                    "cientifico": "Casearia Sylvestris Eichler",
+                    "comum1": "Erva-De_Bugre",
+                    "comum2": "Guaçatonga"
+                }
+            ],
+            "parte_usada": 
+            [
+                "Folhas"
+            ],
+            "nacionalidade": "Brasil",
+            "regionalidade":
+            [
+                null,
+                null
+            ],
+            "uso_principal": "Depurativo",
+            "usos":
+            [
+                "Antissifilíco",
+                "Moléstias Da Pele",
+                "Antifebril",
+                "Antidispéptico",
+                "Depurativo",
+                null,
+                null
+            ],
+            "preparo":
+            [
+                "Acima De 12 Anos: Tomar 150 ml Do Infuso, 5 Minutos Após O Preparo, Duas A Três Vezes Ao Dia."
+            ],
+            "contraindicacaoes":
+            [
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+
+        },
+
+        {
+            "id": 5,
+            "nomes":
+            [
+                {
+                    "cientifico": "Pimpinella Anisum L.",
+                    "comum1": "Erva-Doce",
+                    "comum2": "Anis"
+                }
+            ],
+            "parte_usada": 
+            [
+                "Frutos",
+                "Sementes"
+            ],
+            "nacionalidade": "Ásia",
+            "regionalidade":
+            [
+                "Sul",
+                null
+            ],
+            "uso_principal": "Carminativo",
+            "usos":
+            [
+                "Estimulante",
+                "Antidispéptico",
+                "Antiespasmódico",
+                "Carminativo",
+                null,
+                null,
+                null
+            ],
+            "preparo":
+            [
+                "Acima De 12 Anos: Tomar 150 ml Do Infuso, 10 A 15 Minutos Após O Preparo, Três Vezes Ao Dia."
+            ],
+            "contraindicacaoes":
+            [
+                "Alérgicos Ao Antol",
+                "Pacientes Com Refluxogite",
+                "Gravidez",
+                "Doenças Hemorrágicas",
+                null
+            ]
+
+        },
+
+        {
+            "id": 6,
+            "nomes":
+            [
+                {
+                    "cientifico": "Maytenus Ilicifolia (Schrad.) Planch.",
+                    "comum1": "Espinheira-Santa",
+                    "comum2": null
+                }
+            ],
+            "parte_usada": 
+            [
+                "Folhas Secas"
+            ],
+            "nacionalidade": "Brasil",
+            "regionalidade":
+            [
+                "Sul",
+                null
+            ],
+            "uso_principal": "Anti-Inflamatório",
+            "usos":
+            [
+                "Analgésico",
+                "Cicatrizante",
+                "Antidispéptico",
+                "Antiácido",
+                "Anti-Inflamatório",
+                null,
+                null
+            ],
+            "preparo":
+            [
+                "Acima De 12 Anos: Tomar 150 ml Do Infuso, Logo Após O Preparo, Três A Quatro Vezes Ao Dia."
+            ],
+            "contraindicacaoes":
+            [
+                "Gestantes",
+                "Lactantes",
+                null,
+                null,
+                null
+            ]
+
+        },
+
+        {
+            "id": 7,
+            "nomes":
+            [
+                {
+                    "cientifico": "Foeniculum Vulgare Mill.",
+                    "comum1": "Funcho",
+                    "comum2": null
+                }
+            ],
+            "parte_usada": 
+            [
+                "Frutos",
+                "Folhas"
+            ],
+            "nacionalidade": "Mediterrâneo",
+            "regionalidade":
+            [
+                null,
+                null
+            ],
+            "uso_principal": "Estomáquico",
+            "usos":
+            [
+                "Estimulante",
+                "Aromático",
+                "Expectorante",
+                "Galactogênico",
+                "Antiflatulento",
+                "Antidispéptico",
+                "Estomáquico"
+            ],
+            "preparo":
+            [
+                "Acima De 12 Anos: Tomar 50 Gotas (2,5 ml) Da Tintura Em 75 ml De Água Uma A Três Vezes Ao Dia."
+            ],
+            "contraindicacaoes":
+            [
+                "Alérgicos A Mebros Da Família Umbelíferas",
+                "Gravidez",
+                null,
+                null,
+                null
+            ]
+
+        },
+
+        {
+            "id": 8,
+            "nomes":
+            [
+                {
+                    "cientifico": "Zingiber Officinale Roscoe",
+                    "comum1": "Gengibre",
+                    "comum2": null
+                }
+            ],
+            "parte_usada": 
+            [
+                "Rizomas",
+                "Raízes",
+                "Folhas"
+            ],
+            "nacionalidade": "Ásia",
+            "regionalidade":
+            [
+                "Sudeste",
+                null
+            ],
+            "uso_principal": "Estomacal",
+            "usos":
+            [
+                "Estomacal",
+                "Carminativo",
+                "Roquidão",
+                "Tosse",
+                "Antiemético",
+                "Antidispéptico",
+                "Excitante"
+            ],
+            "preparo":
+            [
+                "Acima De 12 Anos: Tomar 150 ml Do Infuso, 5 Minutos Após O Preparo, Duas A Quatro Vezes Ao Dia."
+            ],
+            "contraindicacaoes":
+            [
+                "Cálculos Biliares",
+                "Gravidez",
+                null,
+                null,
+                null
+            ]
+
+        },
+
+        {
+            "id": 9,
+            "nomes":
+            [
+                {
+                    "cientifico": "Mikania Glomerata Sprengel",
+                    "comum1": "Guaco",
+                    "comum2": null
+                }
+            ],
+            "parte_usada": 
+            [
+                "Folhas"
+            ],
+            "nacionalidade": "América Do Sul",
+            "regionalidade":
+            [
+                "Suldeste",
+                "Sul"
+            ],
+            "uso_principal": "Tônico",
+            "usos":
+            [
+                "Depurativo",
+                "Febrífugo",
+                "Tônico",
+                "Expectorante",
+                null,
+                null,
+                null
+            ],
+            "preparo":
+            [
+                "Acima De 12 Anos: Tomar 150 Ml Do Infuso, Logo Após O Preparo, Duas Vezes Ao Dia."
+            ],
+            "contraindicacaoes":
+            [
+                "Fluxo Mesntrual Abundante",
+                "Pessoas com Hepatopatias",
+                "Trombocitopenias",
+                "Coagulopatias",
+                null
+            ]
+
+        },
+        
+        {
+            "id": 10,
+            "nomes":
+            [
+                {
+                    "cientifico": "Mentha X Piperita L.",
+                    "comum1": "Hortelã-Pimenta",
+                    "comum2": null
+                }
+            ],
+            "parte_usada": 
+            [
+                "Folha",
+                "Sumidade Florida"
+            ],
+            "nacionalidade": "Europa",
+            "regionalidade":
+            [
+                null,
+                null
+            ],
+            "uso_principal": "Antiespamódico",
+            "usos":
+            [
+                "Carminativo",
+                "Estomacal",
+                "Estimulante",
+                "Vermifugo",
+                "Antiflatulento",
+                "Antiespasmódico",
+                null
+            ],
+            "preparo":
+            [
+                "Acima De 12 Anos: Tomar 150 ml Do Infuso, 10 Minutos Após O Preparo, Duas A Quatro Vezes Ao Dia."
+            ],
+            "contraindicacaoes":
+            [
+                "Gravidez",
+                "Crianças",
+                "Lactantes",
+                null,
+                null
+            ]
+
+        }
+
+    ]
+}
