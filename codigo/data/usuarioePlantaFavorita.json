@@ -1,0 +1,31 @@
+{
+    "$id": "https://example.com/person.schema.json",
+    "$schema":"https://json-schema.org/draft/2022-05/schema",
+    "title": "Usuario e Planta Favorita",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "O nome do usuário."
+      },
+      "email": {
+        "type": "string",
+        "description": "Email escolhido pelo usuário."
+      },
+      "passaword": {
+        "description": "Senha escolhida pelo usuário.",
+        "type": "string",
+        "minimum": 0
+      },
+      "id": {
+        "description": "Identificação do usuário.",
+        "type": "string",
+        "minimum": 0
+      },
+      "planta favorita": {
+        "description": "Planta favorita do usuário.",
+        "type": "string",
+        "minimum": 0 
+      }
+    }
+}
