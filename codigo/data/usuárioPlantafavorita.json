@@ -24,7 +24,7 @@
       },
       "planta favorita": {
         "description": "Planta favorita do usuário.",
-        "type": "string",
+        "type": "array",
         "minimum": 0 
       }
     }
