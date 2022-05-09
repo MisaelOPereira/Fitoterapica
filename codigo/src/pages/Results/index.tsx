@@ -13,59 +13,55 @@ export function Results() {
   const [filteredPlants, setFilteredPlants] = useState<Plant[]>([]);
 
   useEffect(() => {
-    async function fetchPlants() {
-      const response = db.plants as Plant[];
-      response.shift();
-      const responsePlants = response;
+    const response = db.plants as Plant[];
+    response.shift();
+    const responsePlants = response;
 
-      setPlants(responsePlants);
+    setPlants(responsePlants);
 
-      const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search);
 
-      const name = params.get('name');
-      const uses = params.getAll('use');
-      const regions = params.getAll('region');
+    const name = params.get('name');
+    const uses = params.getAll('use');
+    const regions = params.getAll('region');
 
-      if (name) {
-        const filtered = responsePlants.filter(plant => {
-          return plant.NomeComum.toLowerCase().includes(name.toLowerCase());
-        });
+    if (name) {
+      const filtered = responsePlants.filter(plant => {
+        return plant.NomeComum.toLowerCase().includes(name.toLowerCase());
+      });
 
-        setFilteredPlants(filtered);
-      } else if (uses.length || regions.length) {
-        const filtered = responsePlants.filter(plant => {
-          let hasFilters = false;
+      setFilteredPlants(filtered);
+    } else if (uses.length || regions.length) {
+      const filtered = responsePlants.filter(plant => {
+        let hasFilters = false;
 
-          if (uses.length) {
-            uses.forEach(use => {
-              if (plant.AçãoSobreOCorpo.UsosRelacionados.includes(use)) {
-                hasFilters = true;
-                return;
-              }
-            });
-          }
+        if (uses.length) {
+          uses.forEach(use => {
+            if (plant.AçãoSobreOCorpo.UsosRelacionados.includes(use)) {
+              hasFilters = true;
+              return;
+            }
+          });
+        }
 
-          if (regions.length) {
-            regions.forEach(region => {
-              if (plant.Regionalidade.includes(region)) {
-                hasFilters = true;
-                return;
-              }
+        if (regions.length) {
+          regions.forEach(region => {
+            if (plant.Regionalidade.includes(region)) {
+              hasFilters = true;
+              return;
+            }
 
-              hasFilters = false;
-            });
-          }
+            hasFilters = false;
+          });
+        }
 
-          return hasFilters;
-        });
+        return hasFilters;
+      });
 
-        setFilteredPlants(filtered);
-      } else {
-        setFilteredPlants(responsePlants);
-      }
+      setFilteredPlants(filtered);
+    } else {
+      setFilteredPlants(responsePlants);
     }
-
-    (async () => await fetchPlants())();
   }, []);
 
   return (

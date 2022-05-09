@@ -1,4 +1,5 @@
 import axios from 'axios';
+import preval from 'babel-plugin-preval';
 import { v4 as uuid } from 'uuid';
 
 import db from '../../data/db.json';
@@ -30,7 +31,7 @@ export interface Plant {
 
 const api = axios.create({
   baseURL: 'http://localhost:3333'
-})
+});
 
 const users = db.users;
 
