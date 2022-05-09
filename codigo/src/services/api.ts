@@ -12,6 +12,22 @@ interface SignUpData extends SignInData {
   name: string;
 }
 
+export interface Plant {
+  NomeComum: string;
+  PlantId: string;
+  OutrosNomesComuns: string[];
+  NomeCientífico: string;
+  AçãoSobreOCorpo: {
+    UsoPrincipal: string;
+    UsosRelacionados: string[];
+  }
+  ContraIndicações: string[];
+  FormasDeUso: string[];
+  PartesUsadas: string[];
+  Regionalidade: string[];
+  Origem: string;
+}
+
 const api = axios.create({
   baseURL: 'http://localhost:3333'
 })

@@ -8,7 +8,7 @@
     }
   ],
 
-  "plants":[
+  "plants": [
     {
         "$schema":"https://json-schema.org/draft/2022-05/schema",
         "$id":"https://example.com/plant.schema.json",
@@ -98,8 +98,8 @@
     },
 
     {
-      "NomeComun": "Erva-Baleeira",
-      "PlantId": 5.1,
+      "NomeComum": "Erva-Baleeira",
+      "PlantId": "5.1",
       "OutrosNomesComuns":
       [
 
@@ -138,8 +138,8 @@
       "Origem": "Mata Atlântica"
     },
     {
-      "NomeComun": "Erva-Cidreira",
-      "PlantId": 5.2,
+      "NomeComum": "Erva-Cidreira",
+      "PlantId": "5.2",
       "OutrosNomesComuns":
       [
           "Melisa"
@@ -172,14 +172,18 @@
       ],
       "Regionalidade":
       [
-
+        "Norte",
+        "Nordeste",
+        "Centro-Oeste",
+        "Sudeste",
+        "Sul"
       ],
       "Origem": "África"
 
     },
     {
-      "NomeComun": "Erva-De-Bicho",
-      "PlantId": 5.3,
+      "NomeComum": "Erva-De-Bicho",
+      "PlantId": "5.3",
       "OutrosNomesComuns":
       [
           "Pimenteira-d'água"
@@ -209,14 +213,18 @@
       ],
       "Regionalidade":
       [
-
+        "Norte",
+        "Nordeste",
+        "Centro-Oeste",
+        "Sudeste",
+        "Sul"
       ],
       "Origem": "América do Norte"
 
     },
     {
-      "NomeComun": "Erva-de-bugre",
-      "PlantId": 5.4,
+      "NomeComum": "Erva-de-bugre",
+      "PlantId": "5.4",
       "OutrosNomesComuns":
       [
           "Guaçatonga"
@@ -245,14 +253,18 @@
       ],
       "Regionalidade":
       [
-
+        "Norte",
+        "Nordeste",
+        "Centro-Oeste",
+        "Sudeste",
+        "Sul"
       ],
       "Origem": "Brasil"
 
     },
     {
-      "NomeComun": "Erva-doce",
-      "PlantId": 5.5,
+      "NomeComum": "Erva-doce",
+      "PlantId": "5.5",
       "OutrosNomesComuns":
       [
           "Anis"
@@ -287,8 +299,8 @@
 
     },
     {
-      "NomeComun": "Espinheira-santa",
-      "PlantId": 5.6,
+      "NomeComum": "Espinheira-santa",
+      "PlantId": "5.6",
       "OutrosNomesComuns":
       [
 
@@ -324,8 +336,8 @@
 
     },
     {
-      "NomeComun": "Funcho",
-      "PlantId": 6.1,
+      "NomeComum": "Funcho",
+      "PlantId": "6.1",
       "OutrosNomesComuns":
       [
       ],
@@ -358,13 +370,17 @@
       ],
       "Regionalidade":
       [
-
+        "Norte",
+        "Nordeste",
+        "Centro-Oeste",
+        "Sudeste",
+        "Sul"
       ],
       "Origem": "Mediterrâneo"
     },
     {
-      "NomeComun": "Gengibre",
-      "PlantId": 7.1,
+      "NomeComum": "Gengibre",
+      "PlantId": "7.1",
       "OutrosNomesComuns":
       [
 
@@ -406,8 +422,8 @@
 
     },
     {
-      "NomeComun": "Guaco",
-      "PlantId": 7.2,
+      "NomeComum": "Guaco",
+      "PlantId": "7.2",
       "OutrosNomesComuns":
       [
 
@@ -445,8 +461,8 @@
 
     },
     {
-      "NomeComun": "Hortelã-Pimenta",
-      "PlantId": 8.1,
+      "NomeComum": "Hortelã-Pimenta",
+      "PlantId": "8.1",
       "OutrosNomesComuns":
       [
 
@@ -480,7 +496,11 @@
       ],
       "Regionalidade":
       [
-
+        "Norte",
+        "Nordeste",
+        "Centro-Oeste",
+        "Sudeste",
+        "Sul"
       ],
       "Origem": "Europa"
 
@@ -492,7 +512,7 @@
             "Cipó-puçá"
         ],
         "NomeCientífico":"Cissus verticillata",
-        "AçãoSobreOCorpo":[{
+        "AçãoSobreOCorpo":{
             "UsoPrincipal":"Sistema Endócrino",
             "UsosRelacionados":[
                 "Diabetes",
@@ -502,13 +522,17 @@
             "ContraIndicações":[
                 "Não recomendado para mulheres grávidas"
             ]
-        }],
+        },
         "FormasdeUso":[
             "Alcolatura", 
             "Extrato Aquoso"
         ],
         "Regionalidade":[
-            "América Tropical"
+          "Norte",
+          "Nordeste",
+          "Centro-Oeste",
+          "Sudeste",
+          "Sul"
         ],
         "Origem":"Cubana",
         "PartesUsadas":[
@@ -522,7 +546,7 @@
             "Pau d'arco"
         ],
         "NomeCientífico":"Handroanthus avellanedae",
-        "AçãoSobreOCorpo":[{
+        "AçãoSobreOCorpo":{
             "UsoPrincipal":"Sistema Corpóreo em Geral",
             "UsosRelacionados":[
                 "Hérnia",
@@ -536,16 +560,18 @@
                 "Pacientes com hemofilia, hepatopatia ou trombocitopenia",
                 "Reage com o lapachol e anticoagulantes"
             ]
-        }],
+        },
         "FormasdeUso":[
             "Decocto",
             "Infuso",
             "Cápsula"
         ],
         "Regionalidade":[
-            "Cerrado",
-            "Mata Atlântica",
-            "Comumente encontrada próxima a matas Ciliares"
+          "Norte",
+          "Nordeste",
+          "Centro-Oeste",
+          "Sudeste",
+          "Sul"
         ],
         "Origem":"Mata Atântica",
         "PartesUsadas":[
@@ -560,7 +586,7 @@
             "Jaboticabeira"
         ],
         "NomeCientífico":"Peleria cauliflora",
-        "AçãoSobreOCorpo":[{
+        "AçãoSobreOCorpo":{
             "UsoPrincipal":"Sistema Digestivo",
             "UsosRelacionados":[
                 "Diurética",
@@ -573,13 +599,15 @@
                 "Prejudica o efeito absorvente do intestino",
                 "Pode causar cancer se uso prolongado"
             ]
-        }],
+        },
         "FormasdeUso":[
             "Decocto",
             "Infuso"
         ],
         "Regionalidade":[
-            "Mata Atlântica"
+          "Nordeste",
+          "Sudeste",
+          "Sul"
         ],
         "Origem":"Brasileira",
         "PartesUsadas":[
@@ -605,7 +633,7 @@
             "lágrima"
         ],
         "NomeCientífico":"Hymenaea courbaril",
-        "AçãoSobreOCorpo":[{
+        "AçãoSobreOCorpo":{
             "UsoPrincipal":"Sistema Corpóreo em Geral",
             "UsosRelacionados":[
                 "Vermifugo",
@@ -615,7 +643,7 @@
                 "Anti-inflamatório"
             ],
             "ContraIndicações":[]
-        }],
+        },
         "FormasdeUso":[
             "Decocto",
             "Infuso",
@@ -626,7 +654,10 @@
             "Melito ou no Vinho"
         ],
         "Regionalidade":[
-            "Todo o brasil, menos sul"
+          "Norte",
+          "Nordeste",
+          "Centro-Oeste",
+          "Sudeste"
         ],
         "Origem":"Brasileira",
         "PartesUsadas":[
@@ -646,7 +677,7 @@
             "Juribeba"
         ],
         "NomeCientífico":"Solanum paniculatum",
-        "AçãoSobreOCorpo":[{
+        "AçãoSobreOCorpo":{
             "UsoPrincipal":"Sistema Digestivo",
             "UsosRelacionados":[
                 "Frebífugo",
@@ -659,7 +690,7 @@
                 "Proibido na gravidez",
                 "Pode gerar convulsões"
             ]
-        }],
+        },
         "FormasdeUso":[
             "Decocto",
             "Infuso",
@@ -668,7 +699,7 @@
             "Vinho"
         ],
         "Regionalidade":[
-            "Sul do Brasil"
+          "Sul"
         ],
         "Origem":"Brasileira",
         "PartesUsadas":[
@@ -685,7 +716,7 @@
             "Lágrimas-de-cristo"
         ],
         "NomeCientífico":"Coix lacrima-jobi",
-        "AçãoSobreOCorpo":[{
+        "AçãoSobreOCorpo":{
             "UsoPrincipal":"Sistema Renal",
             "UsosRelacionados":[
                 "Doenças renais",
@@ -697,13 +728,17 @@
             "ContraIndicações":[
                 "Proibido na gravidez"
             ]
-        }],
+        },
         "FormasdeUso":[
             "Decocto",
             "Infuso"
         ],
         "Regionalidade":[
-            "Todo o Brasil"
+          "Norte",
+          "Nordeste",
+          "Centro-Oeste",
+          "Sudeste",
+          "Sul"
         ],
         "Origem":"China",
         "PartesUsadas":[
@@ -721,7 +756,7 @@
             "Jasmim-borboleta"
         ],
         "NomeCientífico":"Hedychium coronarium",
-        "AçãoSobreOCorpo":[{
+        "AçãoSobreOCorpo":{
             "UsoPrincipal":"Sistema Respiratório",
             "UsosRelacionados":[
                 "Bronquite",
@@ -731,12 +766,16 @@
             "ContraIndicações":[
                 "Proibido na gravidez"
             ]
-        }],
+        },
         "FormasdeUso":[
             "Decocto"
         ],
         "Regionalidade":[
-            "Todo o Brasil, mas mais comumente áreas de brejo"
+          "Norte",
+          "Nordeste",
+          "Centro-Oeste",
+          "Sudeste",
+          "Sul"
         ],
         "Origem":"Asiática",
         "PartesUsadas":[
@@ -755,7 +794,7 @@
             "Baba-de-boi"
         ],
         "NomeCientífico":"Solanum lycocarpum",
-        "AçãoSobreOCorpo":[{
+        "AçãoSobreOCorpo":{
             "UsoPrincipal":"Sistema Respiratório",
             "UsosRelacionados":[
                 "Bronquite",
@@ -767,7 +806,7 @@
             "ContraIndicações":[
                 "Proibido na gravidez"
             ]
-        }],
+        },
         "FormasdeUso":[
             "Decocto",
             "Infuso",
@@ -776,7 +815,9 @@
             "Amido do fruto"
         ],
         "Regionalidade":[
-            "Cerrado"
+          "Nordeste",
+          "Centro-Oeste",
+          "Sudeste"
         ],
         "Origem":"Brasil",
         "PartesUsadas":[
@@ -802,7 +843,7 @@
             "Vermute"
         ],
         "NomeCientífico":"Artemisia absinthium",
-        "AçãoSobreOCorpo":[{
+        "AçãoSobreOCorpo":{
             "UsoPrincipal":"Sistema Digestório e reprodutor feminino",
             "UsosRelacionados":[
                 "Antiespasmódica",
@@ -815,7 +856,7 @@
                 "ingerido em doses elevadas, é um veneno que causa convulsões tetânicas, perturbações psíquicas e alucinações",
                 "A planta fresca pode provocar dermatite de contato, pode causar dor de cabeça, tremores, agitação, dormência, inquietação, falência renal, constipação, vertigem e vômitos"
             ]
-        }],
+        },
         "FormasdeUso":[
             "Decocto",
             "Infuso",
@@ -825,7 +866,11 @@
             "Macerado"
         ],
         "Regionalidade":[
-            "Todo o Brasil"
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
         ],
         "Origem":"Grécia",
         "PartesUsadas":[

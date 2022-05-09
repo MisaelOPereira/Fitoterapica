@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../hooks/useAuth';
 import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 
 import Drawer from 'react-modern-drawer'
