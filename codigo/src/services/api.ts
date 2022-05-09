@@ -13,6 +13,13 @@ interface SignUpData extends SignInData {
   name: string;
 }
 
+interface User {
+  id: string;
+  name: string;
+  email: string;
+  password: string;
+}
+
 export interface Plant {
   NomeComum: string;
   PlantId: string;
@@ -30,13 +37,14 @@ export interface Plant {
 }
 
 const api = axios.create({
-  baseURL: 'http://localhost:3333'
+  baseURL: 'https://fitoterapica-api.herokuapp.com'
 });
 
-const users = db.users;
-
 export const usersApi = {
-  signIn: ({ email, password }: SignInData) => {
+  signIn: async ({ email, password }: SignInData) => {
+    const response = await api.get('/users');
+    const users = response.data as User[];
+
     const user = users.find(user => user.email === email);
 
     if (user && user.password === password) {
@@ -48,7 +56,10 @@ export const usersApi = {
       throw new Error('Não foi possível efetuar o login. Verifique as credenciais.');
     }
   },
-  signUp: ({ name, email, password }: SignUpData) => {
+  signUp: async ({ name, email, password }: SignUpData) => {
+    const response = await api.get('/users');
+    const users = response.data as User[];
+
     users.forEach(user => {
       if (user.email === email) {
         throw new Error('Este e-mail já está sendo utilizado.');

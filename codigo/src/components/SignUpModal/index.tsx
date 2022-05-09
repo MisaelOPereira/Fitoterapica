@@ -49,9 +49,9 @@ export function SignUpModal({ onClose }: ModalProps) {
 
   const { signUp } = useAuth();
 
-  const handleSignUp: SubmitHandler<SignUpFormData> = data => {
+  const handleSignUp: SubmitHandler<SignUpFormData> = async data => {
     try {
-      signUp(data);
+      await signUp(data);
 
       onClose();
     } catch (err) {

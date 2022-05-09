@@ -22,9 +22,9 @@ interface AuthContextData {
     id: string;
     name: string;
   },
-  signIn: (credentials: SignInData) => void;
+  signIn: (credentials: SignInData) => Promise<void>;
   signOut: () => void;
-  signUp: (credentials: SignUpData) => void;
+  signUp: (credentials: SignUpData) => Promise<void>;
 }
 
 export const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -42,8 +42,8 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
     return {} as AuthState;
   });
   
-  function signIn({ email, password }: SignInData) {
-    const user = usersApi.signIn({
+  async function signIn({ email, password }: SignInData) {
+    const user = await usersApi.signIn({
       email,
       password
     });
@@ -59,8 +59,8 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
     setData({} as AuthState);
   }
 
-  function signUp({ name, email, password }: SignUpData) {
-    const user = usersApi.signUp({
+  async function signUp({ name, email, password }: SignUpData) {
+    const user = await usersApi.signUp({
       name,
       email,
       password

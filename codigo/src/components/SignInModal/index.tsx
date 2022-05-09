@@ -40,9 +40,9 @@ export function SignInModal({ onClose }: ModalProps) {
 
   const { signIn } = useAuth();
 
-  const handleSignIn: SubmitHandler<SignInFormData> = data => {
+  const handleSignIn: SubmitHandler<SignInFormData> = async data => {
     try {
-      signIn(data);
+      await signIn(data);
 
       onClose();
     } catch (err) {
