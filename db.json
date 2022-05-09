@@ -5,6 +5,12 @@
       "name": "Gabriel Ferreira Marques Mendes",
       "email": "gabriel.ferreira5584@gmail.com",
       "password": "123456"
+    },
+    {
+      "id": "c7123380-fea6-4dc8-ab4e-36719b77cc29",
+      "name": "Teste2",
+      "email": "teste2@gmail.com",
+      "password": "123456"
     }
   ],
 
