@@ -42,6 +42,7 @@ export const usersApi = {
   signIn: async ({ email, password }: SignInData) => {
     const response = await api.get('/users');
     const users = response.data as User[];
+    users.shift();
 
     const user = users.find(user => user.email === email);
 
@@ -58,6 +59,7 @@ export const usersApi = {
   signUp: async ({ name, email, password }: SignUpData) => {
     const response = await api.get('/users');
     const users = response.data as User[];
+    users.shift();
 
     users.forEach(user => {
       if (user.email === email) {
@@ -81,6 +83,50 @@ export const usersApi = {
       id: user.id,
       name: user.name,
       favorite_plants: user.favorite_plants
+    }
+  },
+  addFavoritePlant: async (userId: string, plant: string) => {
+    const response = await api.get(`/users/${userId}`);
+    const { id, name, email, password, favorite_plants } = response.data as User;
+
+    favorite_plants.push(plant);
+
+    const updatedUser = {
+      id,
+      name,
+      email,
+      password,
+      favorite_plants
+    }
+
+    await api.put(`/users/${userId}`, updatedUser);
+
+    return {
+      id,
+      name,
+      favorite_plants
+    }
+  },
+  removeFavoritePlant: async (userId: string, plant: string) => {
+    const response = await api.get(`/users/${userId}`);
+    const { id, name, email, password, favorite_plants } = response.data as User;
+
+    const updated_favorite_plants = favorite_plants.filter(favoritePlant => favoritePlant !== plant);
+
+    const updatedUser = {
+      id,
+      name,
+      email,
+      password,
+      favorite_plants: updated_favorite_plants
+    }
+
+    await api.put(`/users/${userId}`, updatedUser);
+
+    return {
+      id,
+      name,
+      favorite_plants: updated_favorite_plants
     }
   }
 }

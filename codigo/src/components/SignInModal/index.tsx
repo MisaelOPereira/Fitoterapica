@@ -44,7 +44,7 @@ export function SignInModal({ onClose }: ModalProps) {
     try {
       await signIn(data);
 
-      onClose();
+      location.reload();
     } catch (err) {
       if (err instanceof Error) {
         toast.error(err.message, {

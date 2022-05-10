@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { api, Plant } from "../../services/api";
 
 import { FiArrowLeft } from "react-icons/fi";
-import { AiOutlineStar } from "react-icons/ai";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 
 import { Sidebar } from "../../components/Sidebar";
 
@@ -16,14 +16,26 @@ interface PlantsParams {
 }
 
 export function Plants() {
-  const { user } = useAuth();
+  const { user, addFavoritePlant, removeFavoritePlant } = useAuth();
 
   const { plantName } = useParams<PlantsParams>();
 
   const [plants, setPlants] = useState<Plant[]>([]);
   const [plant, setPlant] = useState<Plant>();
 
-  const isFavorite = user && user.favorite_plants.includes(plantName);
+  const [isFavorite, setIsFavorite] = useState(user && user.favorite_plants.includes(plantName));
+
+  async function handleFavorite() {
+    if (isFavorite) {
+      await removeFavoritePlant(plantName);
+
+      setIsFavorite(false);
+    } else {
+      await addFavoritePlant(plantName);
+
+      setIsFavorite(true);
+    }
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -54,8 +66,16 @@ export function Plants() {
 
         </div>
 
-        <button type="button" title="Adicionar aos favoritos">
-          <AiOutlineStar />
+        <button
+          onClick={handleFavorite}
+          type="button"
+          title="Marcar/desmarcar como favorita"
+        >
+          {isFavorite ? (
+            <AiFillStar />
+          ) : (
+            <AiOutlineStar />
+          )}
         </button>
 
         <div className="plant">
@@ -85,6 +105,10 @@ export function Plants() {
             ))}
           </>
         )}
+
+        <p className="references"><strong>Referências bibliográficas:</strong></p>
+        <p>Grandi, Telma Sueli Mesquita. Tratado das plantas medicinais [recurso eletrônico]: minerais, nativas e cultivadas/Telma Sueli Mesquita Grandi. - 1.ed. - Dados eletrônicos. - Belo Horizonte: Adaequatio Estúdio, 2014. 1204 p. : il. color.</p>
+        <p>Brasil. Agência Nacional de Vigilância Sanitária. Formulário de Fitoterápicos da Farmacopéia Brasileira / Agência Nacional de Vigilância Sanitária. Brasília: Anvisa, 2011. 126pg.</p>
       </div>
     </div>
   ) : (

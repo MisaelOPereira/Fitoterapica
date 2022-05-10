@@ -53,7 +53,7 @@ export function SignUpModal({ onClose }: ModalProps) {
     try {
       await signUp(data);
 
-      onClose();
+      location.reload();
     } catch (err) {
       if (err instanceof Error) {
         toast.error(err.message, {

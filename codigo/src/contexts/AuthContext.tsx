@@ -27,6 +27,8 @@ interface AuthContextData {
   signIn: (credentials: SignInData) => Promise<void>;
   signOut: () => void;
   signUp: (credentials: SignUpData) => Promise<void>;
+  addFavoritePlant: (plant: string) => Promise<void>;
+  removeFavoritePlant: (plant: string) => Promise<void>;
 }
 
 export const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -59,6 +61,8 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
     localStorage.removeItem('user');
 
     setData({} as AuthState);
+
+    location.reload();
   }
 
   async function signUp({ name, email, password }: SignUpData) {
@@ -72,9 +76,31 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
 
     setData({ user });
   }
+
+  async function addFavoritePlant(plant: string) {
+    const updatedUser = await usersApi.addFavoritePlant(data.user.id, plant);
+
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+
+    setData({ user: updatedUser });
+  }
+
+  async function removeFavoritePlant(plant: string) {
+    const updatedUser = await usersApi.removeFavoritePlant(data.user.id, plant);
+
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+    
+    setData({ user: updatedUser });
+  }
   
   return (
-    <AuthContext.Provider value={{ user: data.user, signIn, signOut, signUp }}>
+    <AuthContext.Provider value={{
+      user: data.user,
+      signIn, signOut,
+      signUp, 
+      addFavoritePlant,
+      removeFavoritePlant
+    }}>
       {children}
     </AuthContext.Provider>
   );

@@ -76,6 +76,7 @@
 
 .plant-info {
   flex: 1;
+  padding-right: 10px;
 }
 
 .plant-container p {
@@ -95,6 +96,14 @@
 
 .plant-container > .mb {
   margin: 20px 0 10px;
+}
+
+.plant-container > .references {
+  margin: 40px 0 10px;
+}
+
+.plant-container > .references + p {
+  margin-bottom: 10px;
 }
 
 @media(max-width: 1000px) {
@@ -119,6 +128,7 @@
 
   .plant-info {
     order: 2;
+    padding-right: 0;
   }
 }
 

@@ -1,15 +1,42 @@
 {
   "users": [
     {
-      "id": "c7123380-fea6-4dc8-ab4e-36719b77cc28",
-      "name": "Gabriel Ferreira Marques Mendes",
-      "email": "gabriel.ferreira5584@gmail.com",
-      "password": "123456",
-      "favorite_plants": [
-          "Erva-doce",
-          "Gengibre",
-          "Guaco"
-      ]
+        "$id": "https://example.com/person.schema.json",
+        "$schema":"https://json-schema.org/draft/2022-05/schema",
+        "id": {
+            "description": "Identificador único do usuário",
+            "type": "string"
+        },
+        "name": {
+            "description": "Nome do usuário",
+            "type": "string"
+        },
+        "email": {
+            "description": "E-mail do usuário",
+            "type": "string"
+        },
+        "password": {
+            "description": "Senha do usuário",
+            "type": "string"
+        },
+        "favorite_plants": {
+            "description": "Plantas favoritas do usuário",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    {
+        "id": "c7123380-fea6-4dc8-ab4e-36719b77cc28",
+        "name": "Gabriel Ferreira Marques Mendes",
+        "email": "gabriel.ferreira5584@gmail.com",
+        "password": "123456",
+        "favorite_plants": [
+        "Erva-doce",
+        "Gengibre",
+        "Guaco"
+        ]
     }
   ],
 
