@@ -1,8 +1,5 @@
 import axios from 'axios';
-import preval from 'babel-plugin-preval';
 import { v4 as uuid } from 'uuid';
-
-import db from '../../data/db.json';
 
 interface SignInData {
   email: string;
@@ -30,13 +27,13 @@ export interface Plant {
     UsosRelacionados: string[];
   }
   ContraIndicações: string[];
-  FormasDeUso: string[];
+  FormasdeUso: string[];
   PartesUsadas: string[];
   Regionalidade: string[];
   Origem: string;
 }
 
-const api = axios.create({
+export const api = axios.create({
   baseURL: 'https://fitoterapica-api.herokuapp.com'
 });
 

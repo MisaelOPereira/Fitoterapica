@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { FiArrowLeft } from "react-icons/fi";
 import { useParams } from "react-router-dom";
-import db from '../../../data/db.json';
+
+import { api, Plant } from "../../services/api";
 
 import { Sidebar } from "../../components/Sidebar";
-import { Plant } from "../../services/api";
 
 import './styles.css';
 
@@ -20,40 +20,55 @@ export function Plants() {
   const [plant, setPlant] = useState<Plant>();
 
   useEffect(() => {
-    const response = db.plants as Plant[];
-    response.shift();
-    const responsePlants = response;
+    async function fetchData() {
+      const response = await api.get('/plants');
+      const responsePlants = response.data as Plant[];
+      responsePlants.shift();
 
-    setPlants(responsePlants);
+      setPlants(responsePlants);
 
-    const thisPlant = responsePlants.find(plant => plant.NomeComum === plantName);
-    setPlant(thisPlant);
+      const thisPlant = responsePlants.find(plant => plant.NomeComum === plantName);
+      setPlant(thisPlant);
+    }
+
+    (async () => await fetchData())();
   }, []);
 
   return plant ? (
     <div className="plant-page">
       <Sidebar plants={plants} />
-      <div className="plant">
+      <div className="plant-container">
         <div className="plant-header">
           <a href="/">
             <FiArrowLeft />
           </a>
           
           <h1>{plant.NomeComum}</h1>
-
-          <span>({plant.NomeCientífico})</span>
         </div>
 
-        <div className="plant-info">
-          {Object.entries(plant).map(info => {
-            return (
-              <p>
-                <strong>{info[0]}: </strong>
-                {String(info[1])}
-              </p>
-            );
-          })}
+        <div className="plant">
+          <div className="plant-info">
+            {plant.OutrosNomesComuns.length > 0 && (<p><strong>Outros nomes: </strong>{plant.OutrosNomesComuns.join(', ')}</p>)}
+            <p><strong>Nome científico: </strong>{plant.NomeCientífico}</p>
+            <p><strong>Regionalidade: </strong>{plant.Regionalidade.length < 5 ? plant.Regionalidade.join(', ') : 'Todo o Brasil'}</p>
+            <p><strong>Origem: </strong>{plant.Origem}</p>
+            <p><strong>Partes usadas: </strong>{plant.PartesUsadas.join(', ')}</p>
+            <p><strong>Uso principal: </strong>{plant.AçãoSobreOCorpo.UsoPrincipal}</p>
+            <p><strong>Demais usos: </strong>{plant.AçãoSobreOCorpo.UsosRelacionados.join(', ')}</p>
+            <p><strong>Nome científico: </strong>{plant.NomeCientífico}</p>
+          </div>
+
+          <div className="image" />
         </div>
+
+        <p><strong>Formas de uso: </strong>
+          {plant.FormasdeUso[0][plant.FormasdeUso[0].length - 1] === '.' ? (
+            plant.FormasdeUso.join(' ')
+          ) : (
+            plant.FormasdeUso.join(', ')
+          )}
+        </p>
+
       </div>
     </div>
   ) : (

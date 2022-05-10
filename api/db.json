@@ -61,7 +61,7 @@
             "ContraIndicações"
         ]
         }],
-        "FormasdeUso":{
+        "FormasDeUso":{
         "description":"Principais métodos de utilização da planta",
         "type":"array",
         "items":{
@@ -91,7 +91,7 @@
         "PlantID",
         "NomeCientífico",
         "AçãoSobreOCorpo",
-        "FormasdeUso",
+        "FormasDeUso",
         "Regionalidade",
         "PartesUsadas"
         ]
@@ -523,7 +523,7 @@
                 "Não recomendado para mulheres grávidas"
             ]
         },
-        "FormasdeUso":[
+        "FormasDeUso":[
             "Alcolatura", 
             "Extrato Aquoso"
         ],
@@ -561,7 +561,7 @@
                 "Reage com o lapachol e anticoagulantes"
             ]
         },
-        "FormasdeUso":[
+        "FormasDeUso":[
             "Decocto",
             "Infuso",
             "Cápsula"
@@ -600,7 +600,7 @@
                 "Pode causar cancer se uso prolongado"
             ]
         },
-        "FormasdeUso":[
+        "FormasDeUso":[
             "Decocto",
             "Infuso"
         ],
@@ -644,7 +644,7 @@
             ],
             "ContraIndicações":[]
         },
-        "FormasdeUso":[
+        "FormasDeUso":[
             "Decocto",
             "Infuso",
             "Xarope",
@@ -691,7 +691,7 @@
                 "Pode gerar convulsões"
             ]
         },
-        "FormasdeUso":[
+        "FormasDeUso":[
             "Decocto",
             "Infuso",
             "Tintura",
@@ -729,7 +729,7 @@
                 "Proibido na gravidez"
             ]
         },
-        "FormasdeUso":[
+        "FormasDeUso":[
             "Decocto",
             "Infuso"
         ],
@@ -767,7 +767,7 @@
                 "Proibido na gravidez"
             ]
         },
-        "FormasdeUso":[
+        "FormasDeUso":[
             "Decocto"
         ],
         "Regionalidade":[
@@ -807,7 +807,7 @@
                 "Proibido na gravidez"
             ]
         },
-        "FormasdeUso":[
+        "FormasDeUso":[
             "Decocto",
             "Infuso",
             "Xarope",
@@ -857,7 +857,7 @@
                 "A planta fresca pode provocar dermatite de contato, pode causar dor de cabeça, tremores, agitação, dormência, inquietação, falência renal, constipação, vertigem e vômitos"
             ]
         },
-        "FormasdeUso":[
+        "FormasDeUso":[
             "Decocto",
             "Infuso",
             "Xarope",
