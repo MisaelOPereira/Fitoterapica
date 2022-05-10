@@ -5,6 +5,7 @@ interface AuthState {
   user: {
     id: string;
     name: string;
+    favorite_plants: string[];
   }
 }
 
@@ -21,6 +22,7 @@ interface AuthContextData {
   user: {
     id: string;
     name: string;
+    favorite_plants: string[];
   },
   signIn: (credentials: SignInData) => Promise<void>;
   signOut: () => void;

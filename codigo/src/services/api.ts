@@ -15,6 +15,7 @@ interface User {
   name: string;
   email: string;
   password: string;
+  favorite_plants: string[];
 }
 
 export interface Plant {
@@ -47,7 +48,8 @@ export const usersApi = {
     if (user && user.password === password) {
       return {
         id: user.id,
-        name: user.name
+        name: user.name,
+        favorite_plants: user.favorite_plants
       }
     } else {
       throw new Error('Não foi possível efetuar o login. Verifique as credenciais.');
@@ -67,7 +69,8 @@ export const usersApi = {
       id: uuid(),
       name,
       email,
-      password
+      password,
+      favorite_plants: []
     }
 
     users.push(user);
@@ -76,7 +79,8 @@ export const usersApi = {
 
     return {
       id: user.id,
-      name: user.name
+      name: user.name,
+      favorite_plants: user.favorite_plants
     }
   }
 }

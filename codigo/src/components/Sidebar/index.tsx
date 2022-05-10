@@ -15,7 +15,7 @@ export function Sidebar({ plants }: SideBarProps) {
           return (
             <a
               key={plant.PlantId}
-              href={`/plants/${plant.PlantId}`}
+              href={`/plants/${plant.NomeComum}`}
             >
               {plant.NomeComum}
             </a>

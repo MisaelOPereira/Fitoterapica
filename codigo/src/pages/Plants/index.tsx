@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import { FiArrowLeft } from "react-icons/fi";
 import { useParams } from "react-router-dom";
-
 import { api, Plant } from "../../services/api";
+
+import { FiArrowLeft } from "react-icons/fi";
+import { AiOutlineStar } from "react-icons/ai";
 
 import { Sidebar } from "../../components/Sidebar";
 
 import './styles.css';
+import { useAuth } from "../../hooks/useAuth";
 
 
 interface PlantsParams {
@@ -14,10 +16,14 @@ interface PlantsParams {
 }
 
 export function Plants() {
+  const { user } = useAuth();
+
   const { plantName } = useParams<PlantsParams>();
 
   const [plants, setPlants] = useState<Plant[]>([]);
   const [plant, setPlant] = useState<Plant>();
+
+  const isFavorite = user && user.favorite_plants.includes(plantName);
 
   useEffect(() => {
     async function fetchData() {
@@ -37,6 +43,7 @@ export function Plants() {
   return plant ? (
     <div className="plant-page">
       <Sidebar plants={plants} />
+
       <div className="plant-container">
         <div className="plant-header">
           <a href="/">
@@ -44,7 +51,12 @@ export function Plants() {
           </a>
           
           <h1>{plant.NomeComum}</h1>
+
         </div>
+
+        <button type="button" title="Adicionar aos favoritos">
+          <AiOutlineStar />
+        </button>
 
         <div className="plant">
           <div className="plant-info">
@@ -55,7 +67,6 @@ export function Plants() {
             <p><strong>Partes usadas: </strong>{plant.PartesUsadas.join(', ')}</p>
             <p><strong>Uso principal: </strong>{plant.AçãoSobreOCorpo.UsoPrincipal}</p>
             <p><strong>Demais usos: </strong>{plant.AçãoSobreOCorpo.UsosRelacionados.join(', ')}</p>
-            <p><strong>Nome científico: </strong>{plant.NomeCientífico}</p>
           </div>
 
           <div className="image" />

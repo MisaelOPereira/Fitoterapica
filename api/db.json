@@ -4,7 +4,12 @@
       "id": "c7123380-fea6-4dc8-ab4e-36719b77cc28",
       "name": "Gabriel Ferreira Marques Mendes",
       "email": "gabriel.ferreira5584@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "favorite_plants": [
+          "Erva-doce",
+          "Gengibre",
+          "Guaco"
+      ]
     }
   ],
 

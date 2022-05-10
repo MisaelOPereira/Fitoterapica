@@ -16,6 +16,7 @@
   flex-direction: column;
   padding: 40px;
   overflow: auto;
+  position: relative;
 }
 
 .plant-header {
@@ -47,10 +48,30 @@
   width: 30px;
 }
 
+.plant-container > button {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  border: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plant-container > button > svg {
+  height: 35px;
+  width: 35px;
+  fill: #ffae00;
+}
+
 .plant {
   width: 100%;
   display: flex;
-  margin: 40px 0 30px;
+  margin: 40px 0 10px;
 }
 
 .plant-info {
@@ -72,11 +93,18 @@
   background: #fab254;
 }
 
-.plant-container > p strong {
-  margin-bottom: 10px;
+.plant-container > .mb {
+  margin: 20px 0 10px;
 }
 
 @media(max-width: 1000px) {
+  .plant > .image {
+    height: 180px;
+    width: 200px;
+  }
+}
+
+@media(max-width: 800px) {
   .plant {
     flex-direction: column;
   }
@@ -109,5 +137,10 @@
 
   .plant-header > h1 {
     font-size: 24px;
+  }
+
+  .plant-container > button {
+    top: 20px;
+    right: 20px;
   }
 }
