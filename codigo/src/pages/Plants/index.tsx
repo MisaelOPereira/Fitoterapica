@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api, Plant } from "../../services/api";
 
+import toast from "react-hot-toast";
 import { FiArrowLeft } from "react-icons/fi";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 
@@ -26,15 +27,24 @@ export function Plants() {
   const [isFavorite, setIsFavorite] = useState(user && user.favorite_plants.includes(plantName));
 
   async function handleFavorite() {
-    if (isFavorite) {
-      await removeFavoritePlant(plantName);
-
-      setIsFavorite(false);
-    } else {
-      await addFavoritePlant(plantName);
-
-      setIsFavorite(true);
+    try {
+      if (isFavorite) {
+        await removeFavoritePlant(plantName);
+  
+        setIsFavorite(false);
+      } else {
+        await addFavoritePlant(plantName);
+  
+        setIsFavorite(true);
+      }
+    } catch (err) {
+      if (err instanceof Error) {
+        toast.error(err.message, {
+          duration: 3000
+        });
+      }
     }
+    
   }
 
   useEffect(() => {

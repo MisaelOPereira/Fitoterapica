@@ -51,6 +51,7 @@
 .plant-container > button {
   height: 50px;
   width: 50px;
+  background: #fff;
   position: absolute;
   top: 40px;
   right: 40px;

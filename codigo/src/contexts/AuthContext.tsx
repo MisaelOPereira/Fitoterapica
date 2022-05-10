@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from 'react';
+import toast from 'react-hot-toast';
 import { usersApi } from '../services/api';
 
 interface AuthState {
@@ -78,6 +79,10 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
   }
 
   async function addFavoritePlant(plant: string) {
+    if (!data.user) {
+      throw new Error('Faça login para adicionar uma planta aos favoritos');
+    }
+
     const updatedUser = await usersApi.addFavoritePlant(data.user.id, plant);
 
     localStorage.setItem('user', JSON.stringify(updatedUser));

@@ -48,7 +48,7 @@ export function SignInModal({ onClose }: ModalProps) {
     } catch (err) {
       if (err instanceof Error) {
         toast.error(err.message, {
-          duration: 1000
+          duration: 3000
         });
       }
     }
