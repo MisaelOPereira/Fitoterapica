@@ -61,14 +61,19 @@ export function Plants() {
           <div className="image" />
         </div>
 
-        <p><strong>Formas de uso: </strong>
-          {plant.FormasdeUso[0][plant.FormasdeUso[0].length - 1] === '.' ? (
-            plant.FormasdeUso.join(' ')
-          ) : (
-            plant.FormasdeUso.join(', ')
-          )}
-        </p>
+        <p className="mb"><strong>Formas de uso: </strong></p>
+        {plant.FormasDeUso.map(info => (
+          <p key={info}>- {info}</p>
+        ))}
 
+        {plant.AçãoSobreOCorpo.ContraIndicações.length > 0 && (
+          <>
+            <p className="mb"><strong>Contraindicações: </strong></p>
+            {plant.AçãoSobreOCorpo.ContraIndicações.map(info => (
+              <p key={info}>- {info}</p>
+            ))}
+          </>
+        )}
       </div>
     </div>
   ) : (

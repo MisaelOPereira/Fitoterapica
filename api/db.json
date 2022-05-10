@@ -115,12 +115,12 @@
               "Contusão",
               "Inflamação",
               "Anti-Inflamatório"
+          ],
+          "ContraIndicações":
+          [
+            
           ]
       },
-      "ContraIndicações":
-      [
-          
-      ],
       "FormasDeUso":
       [
           "Aplicar Compressa Na Região Afetada, Três Vezes Ao Dia."
@@ -155,12 +155,12 @@
               "Anti-histérico",
               "Antiespamódico",
               "Ansiolítico"
+          ],
+          "ContraIndicações":
+          [
+              "Evitar O Uso No Caso De Hipersensibilidade, Na Gravidez, Na Baixa Atividade Da Tireóide."
           ]
       },
-      "ContraIndicações":
-      [
-          "Evitar O Uso No Caso De Hipersensibilidade, Na Gravidez, Na Baixa Atividade Da Tireóide."
-      ],
       "FormasDeUso":
       [
           "Acima De 12 Anos: Tomar 150 ml Do Infuso, 10 A 15 Minutos Após O Preparo, Duas A Três Vezes Ao Dia."
@@ -197,12 +197,12 @@
               "Varizes",
               "Reumatismo",
               "Anti-hemorrhoidal"
+          ],
+          "ContraIndicações":
+          [
+
           ]
       },
-      "ContraIndicações":
-      [
-
-      ],
       "FormasDeUso":
       [
           "Fazer Banho De Assento Três Vezes Ao Dia."
@@ -238,12 +238,12 @@
               "Moléstias da pele",
               "Antifebril",
               "Antidispéptico"
+          ],
+          "ContraIndicações":
+          [
+              
           ]
       },
-      "ContraIndicações":
-      [
-
-      ],
       "FormasDeUso":
       [
           "Acima De 12 Anos: Tomar 150 ml Do Infuso, 5 Minutos Após O Preparo, Duas A Três Vezes Ao Dia."
@@ -277,12 +277,12 @@
               "Estimulante",
               "Antidispéptico",
               "Antiespamódico"
+          ],
+          "ContraIndicações":
+          [
+              "Em pacientes alérgicos ao anetol e com refluxofagite, gravidez, doenças hemorrágicas."
           ]
       },
-      "ContraIndicações":
-      [
-          "Em pacientes alérgicos ao anetol e com refluxofagite, gravidez, doenças hemorrágicas."
-      ],
       "FormasDeUso":
       [
           "Acima De 12 Anos: Tomar 150 ml Do Infuso, 10 A 15 Minutos Após O Preparo, Três Vezes Ao Dia."
@@ -314,12 +314,12 @@
               "Cicatrizante",
               "Antidispéptico",
               "Antiácido"
+          ],
+          "ContraIndicações":
+          [
+              "Lactantes"
           ]
       },
-      "ContraIndicações":
-      [
-          "Lactantes"
-      ],
       "FormasDeUso":
       [
           "Acima De 12 Anos: Tomar 150 Ml Do Infuso, Logo Após O Preparo, Três A Quatro Vezes Ao Dia."
@@ -353,12 +353,12 @@
               "Antiflatulanto",
               "Antidispéptico",
               "Estomáquico"
+          ],
+          "ContraIndicações":
+          [
+              "Alérgico a membros da família Umbelíferas"
           ]
       },
-      "ContraIndicações":
-      [
-          "Alérgico a membros da família Umbelíferas"
-      ],
       "FormasDeUso":
       [
           "Acima De 12 Anos: Tomar 50 Gotas (2,5 ml) Da Tintura Em 75 ml De Água Uma A Três Vezes Ao Dia."
@@ -396,14 +396,14 @@
               "Tosse",
               "Antiemétio",
               "Antidispéptico"
+          ],
+          "ContraIndicações":
+          [
+              "Cálculos Biliares",
+              "Gravidez"
+
           ]
       },
-      "ContraIndicações":
-      [
-          "Cálculos Biliares",
-          "Gravidez"
-
-      ],
       "FormasDeUso":
       [
           "Acima De 12 Anos: Tomar 150 ml Do Infuso, 5 Minutos Após O Preparo, Duas A Quatro Vezes Ao Dia."
@@ -437,13 +437,12 @@
               "Febrífugo",
               "Expectorante",
               "Tônico"
+          ],
+          "ContraIndicações":
+          [
 
           ]
       },
-      "ContraIndicações":
-      [
-
-      ],
       "FormasDeUso":
       [
           "Acima De 12 Anos: Tomar 150 Ml Do Infuso, Logo Após O Preparo, Duas Vezes Ao Dia."
@@ -477,14 +476,14 @@
               "Estimulante",
               "Vermífugo",
               "Antiflatulanto"
+          ],
+          "ContraIndicações":
+          [
+              "Gravidez",
+              "Crianças De Pouca Idade",
+              "Lactantes"
           ]
       },
-      "ContraIndicações":
-      [
-          "Gravidez",
-          "Crianças De Pouca Idade",
-          "Lactantes"
-      ],
       "FormasDeUso":
       [
           "Acima De 12 Anos: Tomar 150 ml Do Infuso, 10 Minutos Após O Preparo, Duas A Quatro Vezes Ao Dia."

@@ -25,9 +25,9 @@ export interface Plant {
   AçãoSobreOCorpo: {
     UsoPrincipal: string;
     UsosRelacionados: string[];
+    ContraIndicações: string[];
   }
-  ContraIndicações: string[];
-  FormasdeUso: string[];
+  FormasDeUso: string[];
   PartesUsadas: string[];
   Regionalidade: string[];
   Origem: string;

@@ -57,8 +57,12 @@
   flex: 1;
 }
 
+.plant-container p {
+  font-size: 18px;
+}
+
 .plant-info > p + p {
-  margin-top: 14px;
+  margin-top: 18px;
 }
 
 .plant > .image {
@@ -66,6 +70,10 @@
   width: 100%;
   max-width: 300px;
   background: #fab254;
+}
+
+.plant-container > p strong {
+  margin-bottom: 10px;
 }
 
 @media(max-width: 1000px) {
