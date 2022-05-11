@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from 'react';
-import toast from 'react-hot-toast';
 import { usersApi } from '../services/api';
 
 interface AuthState {
@@ -30,6 +29,7 @@ interface AuthContextData {
   signUp: (credentials: SignUpData) => Promise<void>;
   addFavoritePlant: (plant: string) => Promise<void>;
   removeFavoritePlant: (plant: string) => Promise<void>;
+  deleteAccount: () => Promise<void>;
 }
 
 export const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -80,7 +80,7 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
 
   async function addFavoritePlant(plant: string) {
     if (!data.user) {
-      throw new Error('Faça login para adicionar uma planta aos favoritos');
+      throw new Error('Faça login para adicionar uma planta aos favoritos.');
     }
 
     const updatedUser = await usersApi.addFavoritePlant(data.user.id, plant);
@@ -97,6 +97,14 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
     
     setData({ user: updatedUser });
   }
+
+  async function deleteAccount() {
+    if(data.user) {
+      await usersApi.deleteAccount(data.user.id);
+
+      signOut();
+    }
+  }
   
   return (
     <AuthContext.Provider value={{
@@ -104,7 +112,8 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
       signIn, signOut,
       signUp, 
       addFavoritePlant,
-      removeFavoritePlant
+      removeFavoritePlant,
+      deleteAccount
     }}>
       {children}
     </AuthContext.Provider>

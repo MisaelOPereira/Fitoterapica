@@ -6,7 +6,6 @@ import { Layout } from './components/Layout';
 import { Home } from './pages/Home'
 import { Results } from './pages/Results'
 import { Plants } from './pages/Plants'
-import { AboutPlants } from './pages/AboutPlants'
 import { AboutUs } from './pages/AboutUs'
 
 
@@ -21,7 +20,6 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/results" exact component={Results} />
             <Route path="/plants/:plantName" exact component={Plants} />
-            <Route path="/about-plants" exact component={AboutPlants} />
             <Route path="/about-us" exact component={AboutUs} />
           </Switch>
         </Layout>

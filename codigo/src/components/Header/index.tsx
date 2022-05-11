@@ -50,9 +50,6 @@ export function Header() {
 
       {width > 800 ?
         <nav className="nav-bar">
-          <a href="/about-plants">Plantas medicinais</a>
-          <div />
-
           {user ? 
             <button onClick={() => setIsProfileModalOpen(true)}>
               <FaUser />
@@ -91,13 +88,6 @@ export function Header() {
                     <IoClose />
                   </button>
                 </div>
-
-                <a
-                  href="/about-plants"
-                  onClick={toggleDrawer}
-                >
-                  Plantas medicinais
-                </a>
 
                 {user ?
                   <button onClick={() => {

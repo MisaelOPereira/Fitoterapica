@@ -75,9 +75,7 @@ export const usersApi = {
       favorite_plants: []
     }
 
-    users.push(user);
-
-    api.post('users', user);
+    await api.post('users', user);
 
     return {
       id: user.id,
@@ -128,5 +126,8 @@ export const usersApi = {
       name,
       favorite_plants: updated_favorite_plants
     }
+  },
+  deleteAccount: async (userId: string) => {
+    await api.delete(`/users/${userId}`);
   }
 }

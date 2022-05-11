@@ -4,6 +4,7 @@ import { api, Plant } from '../../services/api';
 import { Sidebar } from '../../components/Sidebar';
 import { ResultBox } from '../../components/ResultBox';
 import { FiArrowLeft } from 'react-icons/fi';
+import notFoundImg from '../../assets/not-found.jpg';
 
 import './styles.css';
 
@@ -79,13 +80,20 @@ export function Results() {
           <h1>Resultados</h1>
         </div>
 
-        <div className="results-boxes">
-          {filteredPlants.map(plant => {
-          return (
-            <ResultBox key={plant.PlantId} plant={plant} />
-          )
-        })}
-        </div>
+        {filteredPlants.length > 0 ? (
+          <div className="results-boxes">
+            {filteredPlants.map(plant => {
+              return (
+                <ResultBox key={plant.PlantId} plant={plant} />
+              )
+            })}
+          </div>
+        ) : (
+          <div className="not-found">
+            <img src={notFoundImg} alt="Nada encontrado" />
+            <span>NENHUM RESULTADO<br/>ENCONTRADO</span>
+          </div>
+        )}
       </div>
     </div>
   );
