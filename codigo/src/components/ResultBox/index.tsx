@@ -1,10 +1,16 @@
+import { Plant } from '../../services/api';
+
 import './styles.css';
 
-export function ResultBox() {
+interface ResultBoxProps {
+  plant: Plant;
+}
+
+export function ResultBox({ plant }: ResultBoxProps) {
   return (
-    <a href="/plants/X" className="result-box">
+    <a href={`/plants/${plant.NomeComum}`} className="result-box">
       <div className="image" />
-      <h2>PLANTA X</h2>
+      <h2>{plant.NomeComum}</h2>
     </a>
   );
 }

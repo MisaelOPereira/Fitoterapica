@@ -12,17 +12,23 @@ import MainLogoImg from '../../assets/main-logo.png';
 import './styles.css';
 
 const useOptions = [
-  { value: 'inflammation', label: 'Anti-inflamatório' },
-  { value: 'stomach', label: 'Estomacal' },
-  { value: 'stimulating', label: 'Estimulante' }
+  { value: 'Anti-inflamatório', label: 'Anti-inflamatório' },
+  { value: 'Estomacal', label: 'Estomacal' },
+  { value: 'Estimulante', label: 'Estimulante' },
+  { value: 'Tônico', label: 'Tônico' },
+  { value: 'Sedativo', label: 'Sedativo' },
+  { value: 'Antifebril', label: 'Antifebril' },
+  { value: 'Analgésico', label: 'Analgésico' },
+  { value: 'Expectorante', label: 'Expectorante' },
+  { value: 'Tosse', label: 'Tosse' },
 ]
 
 const regionOptions = [
-  { value: 'north', label: 'Norte' },
-  { value: 'northeast', label: 'Nordeste' },
-  { value: 'midwest', label: 'Centro-Oeste' },
-  { value: 'southeast', label: 'Sudeste' },
-  { value: 'south', label: 'Sul' }
+  { value: 'Norte', label: 'Norte' },
+  { value: 'Nordeste', label: 'Nordeste' },
+  { value: 'Centro-Oeste', label: 'Centro-Oeste' },
+  { value: 'Sudeste', label: 'Sudeste' },
+  { value: 'Sul', label: 'Sul' }
 ]
 
 export function Home() {

@@ -55,6 +55,25 @@
   grid-gap: 40px;
 }
 
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.not-found > img {
+  height: 240px;
+  width: 260px;
+  margin-bottom: 30px;
+}
+
+.not-found > span {
+  font-weight: bold;
+  color: #6C778B;
+  text-align: center;
+}
+
 @media(max-width: 1000px) {
   .results-boxes {
     grid-template-columns: 1fr 1fr;
@@ -77,5 +96,15 @@
   .results-boxes {
     margin-top: 40px;
     grid-gap: 30px;
+  }
+
+  .not-found {
+    margin-bottom: 40px;
+  }
+
+  .not-found > img {
+    height: 180px;
+    width: 200px;
+    margin-bottom: 50px;
   }
 }

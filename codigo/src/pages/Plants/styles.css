@@ -1,0 +1,157 @@
+.plant-page {
+  height: 100%;
+  width: 100vw;
+  max-width: calc(min(800px, 100vw) + 250px);
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 10px -2px #000;
+  clip-path: inset(0px -15px 0px -15px);
+}
+
+.plant-container {
+  width: 100%;
+  max-width: calc(min(800px, 100vw));
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  overflow: auto;
+  position: relative;
+}
+
+.plant-header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.plant-header > a {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: #5f5f5f;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.2s;
+}
+
+.plant-header > a:hover {
+  background: rgba(220, 99, 107, 0.342);
+}
+
+.plant-header > a > svg {
+  height: 30px;
+  width: 30px;
+}
+
+.plant-container > button {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  border: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plant-container > button > svg {
+  height: 35px;
+  width: 35px;
+  fill: #ffae00;
+}
+
+.plant {
+  width: 100%;
+  display: flex;
+  margin: 40px 0 10px;
+}
+
+.plant-info {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.plant-container p {
+  font-size: 18px;
+}
+
+.plant-info > p + p {
+  margin-top: 18px;
+}
+
+.plant > .image {
+  height: 280px;
+  width: 100%;
+  max-width: 300px;
+  background: #fab254;
+}
+
+.plant-container > .mb {
+  margin: 20px 0 10px;
+}
+
+.plant-container > .references {
+  margin: 40px 0 10px;
+}
+
+.plant-container > .references + p {
+  margin-bottom: 10px;
+}
+
+@media(max-width: 1000px) {
+  .plant > .image {
+    height: 180px;
+    width: 200px;
+  }
+}
+
+@media(max-width: 800px) {
+  .plant {
+    flex-direction: column;
+  }
+
+  .plant > .image {
+    height: 180px;
+    width: 200px;
+    order: 1;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  .plant-info {
+    order: 2;
+    padding-right: 0;
+  }
+}
+
+@media(max-width: 500px) {
+  .plant-container {
+    padding: 20px;
+  }
+
+  .plant-header {
+    font-size: 14px;
+  }
+
+  .plant-header > a {
+    margin-right: 8px;
+  }
+
+  .plant-header > h1 {
+    font-size: 24px;
+  }
+
+  .plant-container > button {
+    top: 20px;
+    right: 20px;
+  }
+}

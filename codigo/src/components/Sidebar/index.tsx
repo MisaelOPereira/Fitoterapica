@@ -1,21 +1,23 @@
+import { Plant } from '../../services/api';
+
 import './styles.css';
 
 interface SideBarProps {
-  onClick?: () => void;
+  plants: Plant[]
 }
 
-export function Sidebar({ onClick }: SideBarProps) {
+export function Sidebar({ plants }: SideBarProps) {
   return (
     <div className="sidebar">
       <span>LISTAGEM GERAL</span>
       <nav>
-        {Array.from({length: 60}, (_, i) => i + 1).map(e => {
+        {plants.map(plant => {
           return (
             <a
-              href={`/plants/${e}`}
-              onClick={onClick}
+              key={plant.PlantId}
+              href={`/plants/${plant.NomeComum}`}
             >
-              Planta {e}
+              {plant.NomeComum}
             </a>
           )
         })}

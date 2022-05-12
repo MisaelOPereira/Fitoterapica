@@ -5,6 +5,7 @@ interface AuthState {
   user: {
     id: string;
     name: string;
+    favorite_plants: string[];
   }
 }
 
@@ -21,10 +22,14 @@ interface AuthContextData {
   user: {
     id: string;
     name: string;
+    favorite_plants: string[];
   },
-  signIn: (credentials: SignInData) => void;
+  signIn: (credentials: SignInData) => Promise<void>;
   signOut: () => void;
-  signUp: (credentials: SignUpData) => void;
+  signUp: (credentials: SignUpData) => Promise<void>;
+  addFavoritePlant: (plant: string) => Promise<void>;
+  removeFavoritePlant: (plant: string) => Promise<void>;
+  deleteAccount: () => Promise<void>;
 }
 
 export const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -42,8 +47,8 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
     return {} as AuthState;
   });
   
-  function signIn({ email, password }: SignInData) {
-    const user = usersApi.signIn({
+  async function signIn({ email, password }: SignInData) {
+    const user = await usersApi.signIn({
       email,
       password
     });
@@ -57,10 +62,12 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
     localStorage.removeItem('user');
 
     setData({} as AuthState);
+
+    location.reload();
   }
 
-  function signUp({ name, email, password }: SignUpData) {
-    const user = usersApi.signUp({
+  async function signUp({ name, email, password }: SignUpData) {
+    const user = await usersApi.signUp({
       name,
       email,
       password
@@ -70,20 +77,45 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
 
     setData({ user });
   }
+
+  async function addFavoritePlant(plant: string) {
+    if (!data.user) {
+      throw new Error('Faça login para adicionar uma planta aos favoritos.');
+    }
+
+    const updatedUser = await usersApi.addFavoritePlant(data.user.id, plant);
+
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+
+    setData({ user: updatedUser });
+  }
+
+  async function removeFavoritePlant(plant: string) {
+    const updatedUser = await usersApi.removeFavoritePlant(data.user.id, plant);
+
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+    
+    setData({ user: updatedUser });
+  }
+
+  async function deleteAccount() {
+    if(data.user) {
+      await usersApi.deleteAccount(data.user.id);
+
+      signOut();
+    }
+  }
   
   return (
-    <AuthContext.Provider value={{ user: data.user, signIn, signOut, signUp }}>
+    <AuthContext.Provider value={{
+      user: data.user,
+      signIn, signOut,
+      signUp, 
+      addFavoritePlant,
+      removeFavoritePlant,
+      deleteAccount
+    }}>
       {children}
     </AuthContext.Provider>
   );
-}
-
-export function useAuth() {
-  const context = useContext(AuthContext);
-
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-
-  return context;
 }

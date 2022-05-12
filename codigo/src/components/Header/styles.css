@@ -121,11 +121,13 @@
 }
 
 .drawer > :is(a, button) {
+  width: 100%;
   background: transparent;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
+  text-align: start;
   border: 0;
   border-radius: 8px;
   cursor: pointer;

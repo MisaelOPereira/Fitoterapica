@@ -1,10 +1,11 @@
-import { useState } from 'react';
-import { useAuth } from '../../contexts/AuthContext';
+import { useEffect, useState } from 'react';
+import { useAuth } from '../../hooks/useAuth';
 import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 
 import Drawer from 'react-modern-drawer'
 import { SignInModal } from '../SignInModal';
 import { SignUpModal } from '../SignUpModal';
+import { ProfileModal } from '../ProfileModal';
 
 import LogoImg from '../../assets/logo.svg';
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -26,11 +27,21 @@ export function Header() {
 
   const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (isSignInModalOpen || isSignUpModalOpen || isProfileModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isSignInModalOpen, isSignUpModalOpen, isProfileModalOpen]);
 
   return (
     <header className="header">
       {isSignInModalOpen && <SignInModal onClose={() => setIsSignInModalOpen(false)}/>}
       {isSignUpModalOpen && <SignUpModal onClose={() => setIsSignUpModalOpen(false)}/>}
+      {isProfileModalOpen && <ProfileModal onClose={() => setIsProfileModalOpen(false)}/>}
 
       <a href="/" className="logo">
         <img src={LogoImg} alt="Logo" />
@@ -39,11 +50,8 @@ export function Header() {
 
       {width > 800 ?
         <nav className="nav-bar">
-          <a href="/about-plants">Plantas medicinais</a>
-          <div />
-
           {user ? 
-            <button onClick={signOut}>
+            <button onClick={() => setIsProfileModalOpen(true)}>
               <FaUser />
               {user.name.split(' ')[0]}
             </button>
@@ -81,16 +89,9 @@ export function Header() {
                   </button>
                 </div>
 
-                <a
-                  href="/about-plants"
-                  onClick={toggleDrawer}
-                >
-                  Plantas medicinais
-                </a>
-
                 {user ?
                   <button onClick={() => {
-                    signOut();
+                    setIsProfileModalOpen(true);
                     toggleDrawer();
                   }}>
                     <FaUser />

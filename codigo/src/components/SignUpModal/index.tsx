@@ -1,7 +1,7 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../hooks/useAuth';
 
 import { Button } from '../Button';
 import { Input } from '../Input';
@@ -49,15 +49,15 @@ export function SignUpModal({ onClose }: ModalProps) {
 
   const { signUp } = useAuth();
 
-  const handleSignUp: SubmitHandler<SignUpFormData> = data => {
+  const handleSignUp: SubmitHandler<SignUpFormData> = async data => {
     try {
-      signUp(data);
+      await signUp(data);
 
-      onClose();
+      location.reload();
     } catch (err) {
       if (err instanceof Error) {
         toast.error(err.message, {
-          duration: 1000
+          duration: 3000
         });
       }
     }

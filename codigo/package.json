@@ -1,7 +1,7 @@
 {
   "name": "fitoterapica",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,7 +10,6 @@
   "dependencies": {
     "@hookform/resolvers": "^2.8.8",
     "axios": "^0.27.1",
-    "json-server": "^0.17.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.29.0",
