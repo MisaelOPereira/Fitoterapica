@@ -53,7 +53,7 @@ export function SignUpModal({ onClose }: ModalProps) {
     try {
       await signUp(data);
 
-      location.reload();
+      onClose();
     } catch (err) {
       if (err instanceof Error) {
         toast.error(err.message, {
@@ -64,8 +64,8 @@ export function SignUpModal({ onClose }: ModalProps) {
   }
 
   return (
-    <div className="modal-bg" onClick={onClose}>
-      <div className="form-box" onClick={e => e.stopPropagation()}>
+    <div className="modal-bg" onMouseDown={onClose}>
+      <div className="form-box" onMouseDown={e => e.stopPropagation()}>
         <button onClick={onClose}>
           <IoClose />
         </button>

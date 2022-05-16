@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Plant } from '../../services/api';
 
 import './styles.css';
@@ -13,12 +14,12 @@ export function Sidebar({ plants }: SideBarProps) {
       <nav>
         {plants.map(plant => {
           return (
-            <a
+            <Link
               key={plant.PlantId}
-              href={`/plants/${plant.NomeComum}`}
+              to={`/plants/${plant.NomeComum}`}
             >
               {plant.NomeComum}
-            </a>
+            </Link>
           )
         })}
       </nav>

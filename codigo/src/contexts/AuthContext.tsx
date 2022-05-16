@@ -62,8 +62,6 @@ export function AuthProvider({ children }: { children: React.ReactElement }) {
     localStorage.removeItem('user');
 
     setData({} as AuthState);
-
-    location.reload();
   }
 
   async function signUp({ name, email, password }: SignUpData) {

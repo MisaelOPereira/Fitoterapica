@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 
+import { Link } from 'react-router-dom';
 import Drawer from 'react-modern-drawer'
 import { SignInModal } from '../SignInModal';
 import { SignUpModal } from '../SignUpModal';
@@ -43,10 +44,10 @@ export function Header() {
       {isSignUpModalOpen && <SignUpModal onClose={() => setIsSignUpModalOpen(false)}/>}
       {isProfileModalOpen && <ProfileModal onClose={() => setIsProfileModalOpen(false)}/>}
 
-      <a href="/" className="logo">
+      <Link to="/" className="logo">
         <img src={LogoImg} alt="Logo" />
         <span>FitoTerápica</span>
-      </a>
+      </Link>
 
       {width > 800 ?
         <nav className="nav-bar">
@@ -64,7 +65,7 @@ export function Header() {
           }
 
           <div />
-          <a href="/about-us">Sobre nós</a>
+          <Link to="/about-us">Sobre nós</Link>
         </nav>
         :
         <>
@@ -118,12 +119,12 @@ export function Header() {
                   </>
                 }
                 
-                <a
-                  href="/about-us"
+                <Link
+                  to="/about-us"
                   onClick={toggleDrawer}
                 >
                   Sobre nós
-                </a>
+                </Link>
               </div>
 
             </Drawer>

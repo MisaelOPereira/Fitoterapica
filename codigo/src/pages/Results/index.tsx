@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { api, Plant } from '../../services/api';
 
+import { Link } from 'react-router-dom';
 import { Sidebar } from '../../components/Sidebar';
 import { ResultBox } from '../../components/ResultBox';
 import { FiArrowLeft } from 'react-icons/fi';
@@ -73,9 +74,9 @@ export function Results() {
       <Sidebar plants={plants} />
       <div className="results">
         <div className="results-title">
-          <a href="/">
+          <Link to="/">
             <FiArrowLeft />
-          </a>
+          </Link>
           
           <h1>Resultados</h1>
         </div>
