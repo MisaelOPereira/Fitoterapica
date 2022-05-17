@@ -19,7 +19,7 @@ interface PlantsParams {
 export function Plants() {
   const { user, addFavoritePlant, removeFavoritePlant } = useAuth();
 
-  const { plantName } = useParams<PlantsParams>();
+  const { plantName } = useParams<{plantName?: string}>() as PlantsParams;
 
   const [plants, setPlants] = useState<Plant[]>([]);
   const [plant, setPlant] = useState<Plant>();
