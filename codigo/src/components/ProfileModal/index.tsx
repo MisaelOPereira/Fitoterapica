@@ -1,5 +1,8 @@
+import { useEffect, useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { v4 as uuid } from 'uuid';
+
+import { Link } from 'react-router-dom';
 
 import { IoMdExit } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
@@ -8,7 +11,6 @@ import { FiTrash2 } from 'react-icons/fi';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 
 import './styles.css';
-import { useEffect, useState } from 'react';
 
 interface ModalProps {
   onClose(): void;
@@ -28,6 +30,12 @@ export function ProfileModal({ onClose }: ModalProps) {
   const [isDeleteSelected, setIsDeleteSelected] = useState(false);
   const [isDeleteLoading, setIsDeleteLoading] = useState(false);
 
+  function handleSignOut() {
+    signOut();
+
+    onClose();
+  }
+
   async function handleDeleteAccount() {
     if (isDeleteSelected) {
       setIsDeleteLoading(true);
@@ -39,12 +47,12 @@ export function ProfileModal({ onClose }: ModalProps) {
   }
 
   return (
-    <div className="modal-bg" onClick={onClose}>
-      <div className="form-box profile-box" onClick={e => e.stopPropagation()}>
+    <div className="modal-bg" onMouseDown={onClose}>
+      <div className="form-box profile-box" onMouseDown={e => e.stopPropagation()}>
         <div className="profile-header">
           <span>{user && user.name}</span>
 
-          <button title="Sair" onClick={signOut}>
+          <button title="Sair" onClick={handleSignOut}>
             <IoMdExit />
           </button>
 
@@ -60,10 +68,14 @@ export function ProfileModal({ onClose }: ModalProps) {
 
           {orderedPlants.length > 0 ? (
             orderedPlants.map(plant => (
-              <a key={uuid()} href={`/plants/${plant}`}>
+              <Link 
+                key={uuid()}
+                to={`/plants/${plant}`}
+                onClick={onClose}
+              >
                 {plant}
                 <BsBoxArrowUpRight />
-              </a>
+              </Link>
             ))
           ) : (
             <div className="no-favorites">
