@@ -107,6 +107,10 @@
     padding: 20px 0 40px;
   }
 
+  .search-box {
+    max-height: none;
+  }
+
   .search-options > button {
     width: 100%;
   }

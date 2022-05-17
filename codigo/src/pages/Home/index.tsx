@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
 import { MultiValue } from 'react-select';
 
@@ -37,7 +37,7 @@ export function Home() {
   const [searchUseValues, setSearchUseValues] = useState<string[]>([]);
   const [searchRegionValues, setSearchRegionValues] = useState<string[]>([]);
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   function handleSelectChange(
     options: MultiValue<{value: string}>,
@@ -63,7 +63,7 @@ export function Home() {
       }).join('');
     }
 
-    history.push(`/results?${queryString}`);
+    navigate(`/results?${queryString}`);
   }
 
   return (

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext'
 
 import { Layout } from './components/Layout';
@@ -16,12 +16,12 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <Layout>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/results" exact component={Results} />
-            <Route path="/plants/:plantName" exact component={Plants} />
-            <Route path="/about-us" exact component={AboutUs} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/results" element={<Results />} />
+            <Route path="/plants/:plantName" element={<Plants />} />
+            <Route path="/about-us" element={<AboutUs />} />
+          </Routes>
         </Layout>
       </AuthProvider>
     </BrowserRouter>
