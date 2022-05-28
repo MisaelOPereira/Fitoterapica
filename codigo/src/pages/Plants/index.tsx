@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, Plant } from "../../services/api";
 import { useAuth } from "../../hooks/useAuth";
+import { getImage } from "../../utils/getImage";
 
 import toast from "react-hot-toast";
 import { FiArrowLeft } from "react-icons/fi";
@@ -10,7 +11,6 @@ import { AiOutlineStar, AiFillStar, AiOutlineLoading3Quarters } from "react-icon
 import { Sidebar } from "../../components/Sidebar";
 
 import './styles.css';
-
 
 interface PlantsParams {
   plantName: string;
@@ -113,7 +113,7 @@ export function Plants() {
                   <p><strong>Demais usos: </strong>{plant.AçãoSobreOCorpo.UsosRelacionados.join(', ')}</p>
                 </div>
 
-                <img src={plant.ImagemURL} alt={plant.NomeComum} className="image" />
+                <img src={getImage(plant.NomeComum)} alt={plant.NomeComum} className="image" />
               </div>
 
               <p className="mb"><strong>Formas de uso: </strong></p>
