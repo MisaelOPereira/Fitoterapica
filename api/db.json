@@ -131,7 +131,7 @@
     {
         "NomeComum":"Abóbora-D'Anta",
         "PlantId":"1.1",
-        "ImagemURL": "/src/assets/plants/aboboradanta.jpg",
+        "ImagemURL": "/assets/plants/aboboradanta.jpg",
         "OutrosNomesComuns":[
             "Cabaça-Amargosa"
         ],
@@ -172,7 +172,7 @@
     {
         "NomeComum":"Açafrão",
         "PlantId":"1.2",
-        "ImagemURL": "/src/assets/plants/acafrao.jpg",
+        "ImagemURL": "/assets/plants/acafrao.jpg",
         "OutrosNomesComuns":[
             "Cúrcuma"
         ],
@@ -212,7 +212,7 @@
     {
         "NomeComum":"Barbatimão",
         "PlantId":"2.1",
-        "ImagemURL": "/src/assets/plants/barbatimao.jpg",
+        "ImagemURL": "/assets/plants/barbatimao.jpg",
         "OutrosNomesComuns":[
             "Casca-Da-Virgindade"
         ],
@@ -252,7 +252,7 @@
     {
         "NomeComum":"Boldo",
         "PlantId":"2.2",
-        "ImagemURL": "/src/assets/plants/boldo.jpg",
+        "ImagemURL": "/assets/plants/boldo.jpg",
         "OutrosNomesComuns":[
             "Boldinho"
         ],
@@ -287,7 +287,7 @@
     {
         "NomeComum":"Café",
         "PlantId":"3.1",
-        "ImagemURL": "/src/assets/plants/cafe.jpg",
+        "ImagemURL": "/assets/plants/cafe.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Coffea Arabica L.",
@@ -325,7 +325,7 @@
     {
         "NomeComum":"Camomila",
         "PlantId":"3.2",
-        "ImagemURL": "/src/assets/plants/camomila.jpg",
+        "ImagemURL": "/assets/plants/camomila.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Chamomilla Recutita (L.) Rauschert",
@@ -366,7 +366,7 @@
     {
         "NomeComum":"Cana-De-Macaco",
         "PlantId":"3.3",
-        "ImagemURL": "/src/assets/plants/canademacaco.jpg",
+        "ImagemURL": "/assets/plants/canademacaco.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Costus Spicatus (Jacq.) Sw.",
@@ -404,7 +404,7 @@
     {
         "NomeComum":"Canela",
         "PlantId":"3.4",
-        "ImagemURL": "/src/assets/plants/canela.jpg",
+        "ImagemURL": "/assets/plants/canela.jpg",
         "OutrosNomesComuns":[
             "Canela-De-Cheiro"
         ],
@@ -445,7 +445,7 @@
     {
         "NomeComum":"Capim Limão",
         "PlantId":"3.5",
-        "ImagemURL": "/src/assets/plants/capimlimao.jpg",
+        "ImagemURL": "/assets/plants/capimlimao.jpg",
         "OutrosNomesComuns":[
             "Capim Cidreira"
         ],
@@ -486,7 +486,7 @@
     {
         "NomeComum":"Dente-De-Leão",
         "PlantId":"4.1",
-        "ImagemURL": "/src/assets/plants/dentedeleao.jpg",
+        "ImagemURL": "/assets/plants/dentedeleao.jpg",
         "OutrosNomesComuns":[
             "Chicória-Silvestre"
         ],
@@ -530,7 +530,7 @@
     {
       "NomeComum": "Erva-Baleeira",
       "PlantId": "5.1",
-      "ImagemURL": "/src/assets/plants/ervabaleeira.jpg",
+      "ImagemURL": "/assets/plants/ervabaleeira.jpg",
       "OutrosNomesComuns":
       [
 
@@ -571,7 +571,7 @@
     {
       "NomeComum": "Erva-Cidreira",
       "PlantId": "5.2",
-      "ImagemURL": "/src/assets/plants/ervacidreira.jpg",
+      "ImagemURL": "/assets/plants/ervacidreira.jpg",
       "OutrosNomesComuns":
       [
           "Melisa"
@@ -616,7 +616,7 @@
     {
       "NomeComum": "Erva-De-Bicho",
       "PlantId": "5.3",
-      "ImagemURL": "/src/assets/plants/ervadebicho.jpg",
+      "ImagemURL": "/assets/plants/ervadebicho.jpg",
       "OutrosNomesComuns":
       [
           "Pimenteira-d'água"
@@ -658,7 +658,7 @@
     {
       "NomeComum": "Erva-de-bugre",
       "PlantId": "5.4",
-      "ImagemURL": "/src/assets/plants/ervadebugre.jpg",
+      "ImagemURL": "/assets/plants/ervadebugre.jpg",
       "OutrosNomesComuns":
       [
           "Guaçatonga"
@@ -699,7 +699,7 @@
     {
       "NomeComum": "Erva-doce",
       "PlantId": "5.5",
-      "ImagemURL": "/src/assets/plants/ervadoce.jpg",
+      "ImagemURL": "/assets/plants/ervadoce.jpg",
       "OutrosNomesComuns":
       [
           "Anis"
@@ -736,7 +736,7 @@
     {
       "NomeComum": "Espinheira-santa",
       "PlantId": "5.6",
-      "ImagemURL": "/src/assets/plants/espinheirasanta.jpg",
+      "ImagemURL": "/assets/plants/espinheirasanta.jpg",
       "OutrosNomesComuns":
       [
 
@@ -774,7 +774,7 @@
     {
       "NomeComum": "Funcho",
       "PlantId": "6.1",
-      "ImagemURL": "/src/assets/plants/funcho.jpg",
+      "ImagemURL": "/assets/plants/funcho.jpg",
       "OutrosNomesComuns":
       [
       ],
@@ -818,7 +818,7 @@
     {
       "NomeComum": "Gengibre",
       "PlantId": "7.1",
-      "ImagemURL": "/src/assets/plants/gengibre.jpg",
+      "ImagemURL": "/assets/plants/gengibre.jpg",
       "OutrosNomesComuns":
       [
 
@@ -862,7 +862,7 @@
     {
       "NomeComum": "Guaco",
       "PlantId": "7.2",
-      "ImagemURL": "/src/assets/plants/guaco.jpg",
+      "ImagemURL": "/assets/plants/guaco.jpg",
       "OutrosNomesComuns":
       [
 
@@ -901,7 +901,7 @@
     {
       "NomeComum": "Hortelã-Pimenta",
       "PlantId": "8.1",
-      "ImagemURL": "/src/assets/plants/hortelapimenta.jpg",
+      "ImagemURL": "/assets/plants/hortelapimenta.jpg",
       "OutrosNomesComuns":
       [
 
@@ -947,7 +947,7 @@
     {
         "NomeComum":"Insulina Vegetal",
         "PlantId":"9.1",
-        "ImagemURL": "/src/assets/plants/insulinavegetal.jpg",
+        "ImagemURL": "/assets/plants/insulinavegetal.jpg",
         "OutrosNomesComuns":[
             "Cipó-puçá"
         ],
@@ -982,7 +982,7 @@
     {
         "NomeComum":"Ipê-roxo",
         "PlantId":"9.2",
-        "ImagemURL": "/src/assets/plants/iperoxo.jpg",
+        "ImagemURL": "/assets/plants/iperoxo.jpg",
         "OutrosNomesComuns":[
             "Pau d'arco"
         ],
@@ -1023,7 +1023,7 @@
     {
         "NomeComum":"Jabuticaba",
         "PlantId":"10.1",
-        "ImagemURL": "/src/assets/plants/jabuticaba.jpg",
+        "ImagemURL": "/assets/plants/jabuticaba.jpg",
         "OutrosNomesComuns":[
             "Jaboticabeira"
         ],
@@ -1061,7 +1061,7 @@
     {
         "NomeComum":"Jatobá",
         "PlantId":"10.2",
-        "ImagemURL": "/src/assets/plants/jatoba.jpg",
+        "ImagemURL": "/assets/plants/jatoba.jpg",
         "OutrosNomesComuns":[
             "Pão-de-ló-de-mico",
             "jataipe ba", 
@@ -1114,7 +1114,7 @@
     {
         "NomeComum":"Jurubeba",
         "PlantId":"10.3",
-        "ImagemURL": "/src/assets/plants/jurubeba.jpg",
+        "ImagemURL": "/assets/plants/jurubeba.jpg",
         "OutrosNomesComuns":[
             "Jurubeba-verdadeira",
             "Jurupeba",
@@ -1154,7 +1154,7 @@
     {
         "NomeComum":"Lágrima de Nossa Senhora",
         "PlantId":"11.1",
-        "ImagemURL": "/src/assets/plants/lagrimadenossasenhora.jpg",
+        "ImagemURL": "/assets/plants/lagrimadenossasenhora.jpg",
         "OutrosNomesComuns":[
             "Conta-de-lágrima",
             "Lágrimas-de-jó",
@@ -1193,7 +1193,7 @@
     {
         "NomeComum":"Lírio do brejo",
         "PlantId":"11.2",
-        "ImagemURL": "/src/assets/plants/liriodobrejo.jpg",
+        "ImagemURL": "/assets/plants/liriodobrejo.jpg",
         "OutrosNomesComuns":[
             "Marianeira", 
             "Lágrima-de-moça", 
@@ -1231,7 +1231,7 @@
     {
         "NomeComum":"Lobeira",
         "PlantId":"11.3",
-        "ImagemURL": "/src/assets/plants/lobeira.jpg",
+        "ImagemURL": "/assets/plants/lobeira.jpg",
         "OutrosNomesComuns":[
             "Fruta-de-lobo", 
             "Jurubeba-de-boi", 
@@ -1276,7 +1276,7 @@
     {
         "NomeComum":"Losna",
         "PlantId":"11.4",
-        "ImagemURL": "/src/assets/plants/losna.jpg",
+        "ImagemURL": "/assets/plants/losna.jpg",
         "OutrosNomesComuns":[
             "Artemísia", 
             "Absinto", 
@@ -1329,7 +1329,7 @@
     {
         "NomeComum":"Pata-de-Vaca",
         "PlantId":"16.1",
-        "ImagemURL": "/src/assets/plants/patadevaca.jpg",
+        "ImagemURL": "/assets/plants/patadevaca.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Bauhinia Forficata Link.",
@@ -1365,7 +1365,7 @@
     {
         "NomeComum":"Taioba",
         "PlantId":"18.1",
-        "ImagemURL": "/src/assets/plants/taioba.jpg",
+        "ImagemURL": "/assets/plants/taioba.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Xanthosoma Violaceum Schott",
@@ -1394,7 +1394,7 @@
     {
         "NomeComum":"Tiririca",
         "PlantId":"18.2",
-        "ImagemURL": "/src/assets/plants/tiririca.jpg",
+        "ImagemURL": "/assets/plants/tiririca.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Cyperus Esculentus L.",
@@ -1428,7 +1428,7 @@
     {
         "NomeComum":"Tomate-Cereja",
         "PlantId":"18.3",
-        "ImagemURL": "/src/assets/plants/tomatecereja.jpg",
+        "ImagemURL": "/assets/plants/tomatecereja.jpg",
         "OutrosNomesComuns":[
             "Tomatinho"
         ],
@@ -1466,7 +1466,7 @@
     {
         "NomeComum":"Tomilho",
         "PlantId":"18.4",
-        "ImagemURL": "/src/assets/plants/tomilho.jpg",
+        "ImagemURL": "/assets/plants/tomilho.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Thymus Vulgaris L.",
@@ -1505,7 +1505,7 @@
     {
         "NomeComum":"Urtiga",
         "PlantId":"19.1",
-        "ImagemURL": "/src/assets/plants/urtiga.jpg",
+        "ImagemURL": "/assets/plants/urtiga.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Urtica Dioica L.",
@@ -1540,7 +1540,7 @@
     {
         "NomeComum":"Urucum",
         "PlantId":"19.2",
-        "ImagemURL": "/src/assets/plants/urucum.jpg",
+        "ImagemURL": "/assets/plants/urucum.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Bixa Orellana L.",
@@ -1580,7 +1580,7 @@
     {
         "NomeComum":"Valeriana",
         "PlantId":"22.1",
-        "ImagemURL": "/src/assets/plants/valeriana.jpg",
+        "ImagemURL": "/assets/plants/valeriana.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Valeriana Officinalis L.",
@@ -1621,7 +1621,7 @@
     {
         "NomeComum":"Vassoura",
         "PlantId":"22.2",
-        "ImagemURL": "/src/assets/plants/vassoura.jpg",
+        "ImagemURL": "/assets/plants/vassoura.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Sida Rhombifolia L.",
@@ -1653,7 +1653,7 @@
     {
         "NomeComum":"Vique",
         "PlantId":"22.3",
-        "ImagemURL": "/src/assets/plants/vique.jpg",
+        "ImagemURL": "/assets/plants/vique.jpg",
         "OutrosNomesComuns":[
         ],
         "NomeCientífico":"Mentha arvense L. var. piperaceum Holmes",
