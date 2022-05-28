@@ -107,6 +107,21 @@
   margin-bottom: 10px;
 }
 
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  height: 30px;
+  width: 30px;
+  margin: 120px auto;
+  animation: rotating 1s linear infinite;
+}
+
 @media(max-width: 1000px) {
   .plant > .image {
     height: 180px;

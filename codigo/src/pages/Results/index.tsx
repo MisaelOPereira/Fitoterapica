@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { api, Plant } from '../../services/api';
 
-import { Link } from 'react-router-dom';
 import { Sidebar } from '../../components/Sidebar';
 import { ResultBox } from '../../components/ResultBox';
 import { FiArrowLeft } from 'react-icons/fi';
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import notFoundImg from '../../assets/not-found.jpg';
 
 import './styles.css';
@@ -13,8 +14,11 @@ export function Results() {
   const [plants, setPlants] = useState<Plant[]>([]);
   const [filteredPlants, setFilteredPlants] = useState<Plant[]>([]);
 
+  const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     async function fetchData() {
+      setIsLoading(true);
       const response = await api.get('/plants');
       const responsePlants = response.data as Plant[];
       responsePlants.shift();
@@ -64,6 +68,8 @@ export function Results() {
       } else {
         setFilteredPlants(responsePlants);
       }
+
+      setIsLoading(false);
     }
     
     (async () => await fetchData())();
@@ -81,20 +87,25 @@ export function Results() {
           <h1>Resultados</h1>
         </div>
 
-        {filteredPlants.length > 0 ? (
-          <div className="results-boxes">
-            {filteredPlants.map(plant => {
-              return (
-                <ResultBox key={plant.PlantId} plant={plant} />
-              )
-            })}
-          </div>
+        {isLoading ? (
+            <AiOutlineLoading3Quarters className="rotating" />
         ) : (
-          <div className="not-found">
-            <img src={notFoundImg} alt="Nada encontrado" />
-            <span>NENHUM RESULTADO<br/>ENCONTRADO</span>
-          </div>
+          filteredPlants.length > 0 ? (
+            <div className="results-boxes">
+              {filteredPlants.map(plant => {
+                return (
+                  <ResultBox key={plant.PlantId} plant={plant} />
+                )
+              })}
+            </div>
+          ) : (
+            <div className="not-found">
+              <img src={notFoundImg} alt="Nada encontrado" />
+              <span>NENHUM RESULTADO<br/>ENCONTRADO</span>
+            </div>
+          )
         )}
+
       </div>
     </div>
   );
