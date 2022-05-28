@@ -64,35 +64,35 @@
         "description":"Nomes Científicos que a planta possui",
             "type":"string"
         },
-        "AçãoSobreOCorpo":[{
-        "description":"Como a planta reage em contato com o corpo",
-        "type":"object",
-        "items":{
-            "UsoPrincipal":{
-                "description":"Sistema Principal sobre o qual a planta age",
-                "type":"String"
-            },
-            "UsosRelacionados":{
-                "description":"Problemas Específicos sobre o qual a planta Age",
-                "type":"Array",
-                "items":{
-                    "type":"string"
+        "AçãoSobreOCorpo":{
+            "description":"Como a planta reage em contato com o corpo",
+            "type":"object",
+            "items":{
+                "UsoPrincipal":{
+                    "description":"Sistema Principal sobre o qual a planta age",
+                    "type":"String"
+                },
+                "UsosRelacionados":{
+                    "description":"Problemas Específicos sobre o qual a planta Age",
+                    "type":"Array",
+                    "items":{
+                        "type":"string"
+                    }
+                },
+                "ContraIndicações":{
+                    "description":"Problemas Específicos que a planta pode causar ou pessoas que não podem consumir",
+                    "type":"Array",
+                    "it1ems":{
+                        "type":"string"
+                    }
                 }
             },
-            "ContraIndicações":{
-                "description":"Problemas Específicos que a planta pode causar ou pessoas que não podem consumir",
-                "type":"Array",
-                "it1ems":{
-                    "type":"string"
-                }
-            }
+            "required":[
+                "UsoPrincipal",
+                "UsosRelacionados",
+                "ContraIndicações"
+            ]
         },
-        "required":[
-            "UsoPrincipal",
-            "UsosRelacionados",
-            "ContraIndicações"
-        ]
-        }],
         "FormasDeUso":{
         "description":"Principais métodos de utilização da planta",
         "type":"array",
@@ -128,7 +128,395 @@
         "PartesUsadas"
         ]
     },
+    {
+        "NomeComum":"Abóbora-D'Anta",
+        "PlantId":"1.1",
+        "OutrosNomesComuns":[
+            "Cabaça-Amargosa"
+        ],
+        "NomeCientífico":"Cayaponia Podantha Cogn",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Purgativa",
+            "UsosRelacionados":[
+                "Emética",
+                "Depurativo",
+                "Anti-sifilíca"
+            ],
+            "ContraIndicações":[
+                "Gestantes",
+                "Lactantes",
+                "Pessoas Com Síndrome do Intestino Irritável",
+                "Pessoas Com Diarréia"
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocto",
+            "Xarope",
+            "Tintura",
+            "Extrato Fluido"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Brasil",
+        "PartesUsadas":[
+            "Raízes"
+        ]
+    },
+    {
+        "NomeComum":"Açafrão",
+        "PlantId":"1.2",
+        "OutrosNomesComuns":[
+            "Cúrcuma"
+        ],
+        "NomeCientífico":"Curcuma longa  L.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Anti-Inflamatório",
+            "UsosRelacionados":[
+                "Afecções Do Fígado E Do Trato Biliar",
+                "Diurético",
+                "Afrodisíaco",
+                "Analgésico",
+                "Antigripal",
+                "Antiespamódico",
+                "Antiescorbútico"
+            ],
+            "ContraIndicações":[
+                "Gestantes",
+                "Crianças Menores De 4 Anos"
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Cocção"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Índia",
+        "PartesUsadas":[
+            "Raízes"
+        ]
+    },
+    {
+        "NomeComum":"Barbatimão",
+        "PlantId":"2.1",
+        "OutrosNomesComuns":[
+            "Casca-Da-Virgindade"
+        ],
+        "NomeCientífico":"Stryphnodendron adstringens (Mart.) Coville",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Hemorróidas",
+            "UsosRelacionados":[
+                "Cicatrizante",
+                "Adstringente",
+                "Hemostático",
+                "Antiescorbútico",
+                "Antileucorreico"
+            ],
+            "ContraIndicações":[
+                "Gestantes",
+                "Uso Elevados Pode Causar Prisão de Ventre."
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocção",
+            "Extrato Aquoso"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Brasil",
+        "PartesUsadas":[
+            "Casca Do Caule",
+            "Ramos"
+        ]
+    },
+    {
+        "NomeComum":"Boldo",
+        "PlantId":"2.2",
+        "OutrosNomesComuns":[
+            "Boldinho"
+        ],
+        "NomeCientífico":"Plecthantus Barbathus Andrews",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Sistema Digestivo",
+            "UsosRelacionados":[
+                "Dor de Cabeça",
+                "Ressaca",
+                "Problemas Estomacais E Digestivos",
+                "Hipotensão Arterial"
+            ],
+            "ContraIndicações":[
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Maceradas Com Água"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Brasil",
+        "PartesUsadas":[
+            "Folhas"
+        ]
+    },
+    {
+        "NomeComum":"Café",
+        "PlantId":"3.1",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Coffea Arabica L.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Estimulante",
+            "UsosRelacionados":[
+                "Diurético",
+                "Obesidade",
+                "Diabetes"
+            ],
+            "ContraIndicações":[
+                "Úlcera Gástrica",
+                "Glaucoma",
+                "Crianças De Pouca Idade",
+                "Limitar A Ingestão Na Gravidez E Lactação"
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocção"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"África",
+        "PartesUsadas":[
+            "Folhas",
+            "Sementes"
+        ]
+    },
+    {
+        "NomeComum":"Camomila",
+        "PlantId":"3.2",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Chamomilla Recutita (L.) Rauschert",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Calmante",
+            "UsosRelacionados":[
+                "Estomáquico",
+                "Insônia",
+                "Feridas",
+                "Eczemas",
+                "Erupções"
+            ],
+            "ContraIndicações":[
+                "Lavar Os Olhos Com Chá De Camomila Pode Induzir À Conjuntivite Alérgica."
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocto",
+            "Tintura",
+            "Extrato Fluido",
+            "Vinho",
+            "Soluto Concentrado",
+            "Cataplasma"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Europa",
+        "PartesUsadas":[
+            "Capítulos Florais"
+        ]
+    },
+    {
+        "NomeComum":"Cana-De-Macaco",
+        "PlantId":"3.3",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Costus Spicatus (Jacq.) Sw.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Diurético",
+            "UsosRelacionados":[
+                "Anemias",
+                "Diarréia",
+                "Gastroenterite",
+                "Litagogo"
+            ],
+            "ContraIndicações":[
 
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocto",
+            "Xarope",
+            "Vinho",
+            "Elixir"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Brasil",
+        "PartesUsadas":[
+            "Toda a Planta, Especialmente Folhas Ou Raízes."
+        ]
+    },
+    {
+        "NomeComum":"Canela",
+        "PlantId":"3.4",
+        "OutrosNomesComuns":[
+            "Canela-De-Cheiro"
+        ],
+        "NomeCientífico":"Cinnamomum verum",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Condimento",
+            "UsosRelacionados":[
+                "Aromática",
+                "Adstringente",
+                "Estimulante",
+                "Febrífugo"
+            ],
+            "ContraIndicações":[
+                "Pessoas Com Úlceras.",
+                "Doenças Graves do Fígado."
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocto",
+            "Pó",
+            "Tintura",
+            "Extrato Fluido",
+            "Xarope"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Ásia",
+        "PartesUsadas":[
+            "Casca Do Caule"
+        ]
+    },
+    {
+        "NomeComum":"Capim Limão",
+        "PlantId":"3.5",
+        "OutrosNomesComuns":[
+            "Capim Cidreira"
+        ],
+        "NomeCientífico":"Cymbopogon Citratus (DC.) Stapf.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Carminativo",
+            "UsosRelacionados":[
+                "Aromática",
+                "Expectorante",
+                "Diarréia",
+                "Antiespamódico"
+            ],
+            "ContraIndicações":[
+                "Gravidez",
+                "Glaucoma",
+                "Hiperplasia Prostática"
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocto",
+            "Maceração",
+            "Essência"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Ásia",
+        "PartesUsadas":[
+            "Folhas",
+            "Rizomas"
+        ]
+    },
+    {
+        "NomeComum":"Dente-De-Leão",
+        "PlantId":"4.1",
+        "OutrosNomesComuns":[
+            "Chicória-Silvestre"
+        ],
+        "NomeCientífico":"Taraxacum Officinale Weber",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Diurético",
+            "UsosRelacionados":[
+                "Nefrite",
+                "Cistite",
+                "Hidropsia"
+            ],
+            "ContraIndicações":[
+                "Câncer Do Ducto Biliar Ou Pancreático.",
+                "Pedras Nos Rins",
+                "Inflamação Da Vesícula",
+                "Úlceras Duodenais",
+                "Obstrução Intestinal",
+                "Inflamação Intestinal"
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocto",
+            "Extrato Fluido",
+            "Alcolatura"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Europa",
+        "PartesUsadas":[
+            "Folhas",
+            "Rizomas",
+            "Raízes"
+        ]
+    },
     {
       "NomeComum": "Erva-Baleeira",
       "PlantId": "5.1",
@@ -907,6 +1295,357 @@
         "PartesUsadas":[
             "Folhas",
             "Sumidades Floridas"
+        ]
+    },
+    {
+        "NomeComum":"Pata-de-Vaca",
+        "PlantId":"16.1",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Bauhinia Forficata Link.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Contra Diabete",
+            "UsosRelacionados":[
+                "Diurético",
+                "Antifungico",
+                "Antibacteriano",
+                "Analgésico",
+                "Antiflamatorio"
+            ],
+            "ContraIndicações":[
+                "Doses Elevadas Causa Diarreia."
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocto",
+            "Tintura",
+            "Extrato Fluido"
+        ],
+        "Regionalidade":[
+            "Minas Gerais"
+        ],
+        "Origem":"Índia e China",
+        "PartesUsadas":[
+            "Folhas",
+            "Raízes",
+            "Flores"
+        ]
+    },
+    {
+        "NomeComum":"Taioba",
+        "PlantId":"18.1",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Xanthosoma Violaceum Schott",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Anti-Hemorroidal",
+            "UsosRelacionados":[
+                "Anti-Vulnerária",
+                "Anti-Colagoga"
+            ],
+            "ContraIndicações":[
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Pó"
+        ],
+        "Regionalidade":[
+            "Minas Gerais"
+        ],
+        "Origem":"América do Sul",
+        "PartesUsadas":[
+            "Tubérculo",
+            "Folha"
+        ]
+    },
+    {
+        "NomeComum":"Tirica",
+        "PlantId":"18.2",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Cyperus Esculentus L.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Menopausa",
+            "UsosRelacionados":[
+                "Antibacteriano",
+                "Antiflamatória",
+                "Balsâmica",
+                "Estimulante",
+                "Diurética"
+            ],
+            "ContraIndicações":[
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Índia",
+        "PartesUsadas":[
+            "Tubérculo"
+        ]
+    },
+    {
+        "NomeComum":"Tomate-Cereja",
+        "PlantId":"18.3",
+        "OutrosNomesComuns":[
+            "Tomatinho"
+        ],
+        "NomeCientífico":"Lycopersicon Pimpinellifolium L.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Inibidor Da Absorção Do Colesterol",
+            "UsosRelacionados":[
+                "Cicatrizante",
+                "Antioxidantes",
+                "Anti-Inflamatório",
+                "Fonte de Magnesio"
+            ],
+            "ContraIndicações":[
+                "A Ingestão De 100 G De Folhas Ou Do Tomate Verde Pode Causar Intoxicação Caracterizada Por Vômitos, Diarreia, Cólicas, Tontura E Baixa Frequência Cardíaca, Podendo Chegar À Morte Por Falha Respiratória."
+            ]
+        },
+        "FormasDeUso":[
+            "Maceração",
+            "Salada",
+            "Sumo"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Peru e Norte do Chile",
+        "PartesUsadas":[
+            "Fruto",
+            "Folha"
+        ]
+    },
+    {
+        "NomeComum":"Tomilho",
+        "PlantId":"18.4",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Thymus Vulgaris L.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Codimento",
+            "UsosRelacionados":[
+                "Estimulante",
+                "Antiespamódico",
+                "Cicatrizante",
+                "Emenagogo",
+                "Vermifugo"
+            ],
+            "ContraIndicações":[
+                "Deve Ser Evitado Em Grandes Quantidades Por Mulheres Grávidas Por Ser Emenagogo, Mas É Seguro Como Tempero."
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocto",
+            "Tintura",
+            "Extrato Fluido",
+            "Xarope"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Grécia",
+        "PartesUsadas":[
+            "Sumidades Floridas"
+        ]
+    },
+    {
+        "NomeComum":"Urtiga",
+        "PlantId":"19.1",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Urtica Dioica L.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Molestias Cutáneas",
+            "UsosRelacionados":[
+                "Psoríase",
+                "Urticária",
+                "Picadas de Inseto",
+                "Adstringente",
+                "Hemostático"
+            ],
+            "ContraIndicações":[
+                "Seu Uso É Contraindicado No Caso De Edemas, De Problemas Cardíacos E Renais, Devido À Excreção Inadequada De Sais Urinários. Seu Uso Interno Excessivo É Contraindicado Na Gravidez."
+            ]
+        },
+        "FormasDeUso":[
+            "Decocto"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Norte da Africa",
+        "PartesUsadas":[
+            "Toda a Planta"
+        ]
+    },
+    {
+        "NomeComum":"Urucum",
+        "PlantId":"19.2",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Bixa Orellana L.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Tosse",
+            "UsosRelacionados":[
+                "Gripe",
+                "Emoliente",
+                "Sarampo Entubado",
+                "Antídoto Contra o Veneno da Mandioca"
+            ],
+            "ContraIndicações":[
+                "Alergia A Corante.",
+                "Consumo Na Diabete",
+                "Na Gravidez e Na Lactação",
+                "Pacientes Com Disfunção Hepática."
+            ]
+        },
+        "FormasDeUso":[
+            "Decocto",
+            "Infuso",
+            "Pó"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Brasil",
+        "PartesUsadas":[
+            "Folhas",
+            "Sementes"
+        ]
+    },
+    {
+        "NomeComum":"Valeriana",
+        "PlantId":"22.1",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Valeriana Officinalis L.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Sedativo",
+            "UsosRelacionados":[
+                "Antiespasmódica",
+                "Contra Vômito"
+            ],
+            "ContraIndicações":[
+                "Gravidez",
+                "Hipersensibilidade Aos Componentes",
+                "Uso Prolongado Ou Altas Doses pode Causar Cefaléia e Agitação",
+                "Reações Alérgicas Cutâneas"
+                
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocto",
+            "Extrato Fluido",
+            "Pó",
+            "Xarope"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Asia e Europa",
+        "PartesUsadas":[
+            "Rizoma",
+            "Raízes"
+        ]
+    },
+    {
+        "NomeComum":"Vassoura",
+        "PlantId":"22.2",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Sida Rhombifolia L.",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Diurético",
+            "UsosRelacionados":[
+                "Contra Tumores Externos"
+            ],
+            "ContraIndicações":[
+                
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Decocto"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Brasil",
+        "PartesUsadas":[
+            "Folhas"
+        ]
+    },
+    {
+        "NomeComum":"Vique",
+        "PlantId":"22.3",
+        "OutrosNomesComuns":[
+        ],
+        "NomeCientífico":"Mentha arvense L. var. piperaceum Holmes",
+        "AçãoSobreOCorpo":{
+            "UsoPrincipal":"Descongestionante Nasal",
+            "UsosRelacionados":[
+                "Calmante",
+                "Estamáquico",
+                "Carminativa"
+            ],
+            "ContraIndicações":[
+               "Evitar O Cair Nos Olhos",
+               "Pessoas Com Refluxogite, Obstrução Do Ducto Biliar, Doenças do Figado e Vesícula"
+                
+            ]
+        },
+        "FormasDeUso":[
+            "Infuso",
+            "Alcoolatura",
+            "Tintura"
+        ],
+        "Regionalidade":[
+            "Norte",
+            "Nordeste",
+            "Centro-Oeste",
+            "Sudeste",
+            "Sul"
+        ],
+        "Origem":"Europa",
+        "PartesUsadas":[
+            "Folhas"
         ]
     }
 ]
