@@ -36,8 +36,7 @@ export interface Plant {
 }
 
 export const api = axios.create({
-  baseURL: 'http://localhost:3200'
-  //baseURL: 'https://fitoterapica-api.herokuapp.com'
+  baseURL: 'https://fitoterapica-api.herokuapp.com'
 });
 
 export const usersApi = {
