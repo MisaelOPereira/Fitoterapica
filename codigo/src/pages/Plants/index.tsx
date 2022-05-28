@@ -113,7 +113,7 @@ export function Plants() {
                   <p><strong>Demais usos: </strong>{plant.AçãoSobreOCorpo.UsosRelacionados.join(', ')}</p>
                 </div>
 
-                <div className="image" />
+                <img src={plant.ImagemURL} alt={plant.NomeComum} className="image" />
               </div>
 
               <p className="mb"><strong>Formas de uso: </strong></p>

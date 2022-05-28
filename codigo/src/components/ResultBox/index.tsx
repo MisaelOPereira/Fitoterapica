@@ -10,7 +10,8 @@ interface ResultBoxProps {
 export function ResultBox({ plant }: ResultBoxProps) {
   return (
     <Link to={`/plants/${plant.NomeComum}`} className="result-box">
-      <div className="image" />
+      <img src={plant.ImagemURL} alt={plant.NomeComum} className="image" />
+
       <h2>{plant.NomeComum}</h2>
     </Link>
   );

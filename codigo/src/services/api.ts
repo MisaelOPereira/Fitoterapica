@@ -21,6 +21,7 @@ interface User {
 export interface Plant {
   NomeComum: string;
   PlantId: string;
+  ImagemURL: string;
   OutrosNomesComuns: string[];
   NomeCientífico: string;
   AçãoSobreOCorpo: {
@@ -35,7 +36,8 @@ export interface Plant {
 }
 
 export const api = axios.create({
-  baseURL: 'https://fitoterapica-api.herokuapp.com'
+  baseURL: 'http://localhost:3200'
+  //baseURL: 'https://fitoterapica-api.herokuapp.com'
 });
 
 export const usersApi = {
