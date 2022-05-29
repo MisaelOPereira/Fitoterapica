@@ -10,7 +10,11 @@ interface ResultBoxProps {
 
 export function ResultBox({ plant }: ResultBoxProps) {
   return (
-    <Link to={`/plants/${plant.NomeComum}`} className="result-box">
+    <Link
+      to={`/plants/${plant.NomeComum}`}
+      state={{ prevPath: (location.pathname+location.search) }}
+      className="result-box"
+    >
       <img src={getImage(plant.NomeComum)} alt={plant.NomeComum} className="image" />
 
       <h2>{plant.NomeComum}</h2>

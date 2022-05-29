@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { api, Plant } from '../../services/api';
 
 import { Sidebar } from '../../components/Sidebar';
@@ -11,6 +11,8 @@ import notFoundImg from '../../assets/not-found.jpg';
 import './styles.css';
 
 export function Results() {
+  const navigate = useNavigate();
+
   const [plants, setPlants] = useState<Plant[]>([]);
   const [filteredPlants, setFilteredPlants] = useState<Plant[]>([]);
 
@@ -80,9 +82,9 @@ export function Results() {
       <Sidebar plants={plants} />
       <div className="results">
         <div className="results-title">
-          <Link to="/">
+          <button onClick={() => navigate('/')}>
             <FiArrowLeft />
-          </Link>
+          </button>
           
           <h1>Resultados</h1>
         </div>

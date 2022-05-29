@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { api, Plant } from "../../services/api";
 import { useAuth } from "../../hooks/useAuth";
 import { getImage } from "../../utils/getImage";
@@ -17,6 +17,14 @@ interface PlantsParams {
 }
 
 export function Plants() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // @ts-ignore
+  const prevPage = location.state?.prevPath as string || '/';
+
+  console.log(prevPage);
+
   const { user, addFavoritePlant, removeFavoritePlant } = useAuth();
 
   const { plantName } = useParams<{plantName?: string}>() as PlantsParams;
@@ -77,9 +85,9 @@ export function Plants() {
 
       <div className="plant-container">
         <div className="plant-header">
-          <Link to="/">
+          <button onClick={() => {navigate(prevPage)}}>
             <FiArrowLeft />
-          </Link>
+          </button>
           
           <h1>{plant?.NomeComum}</h1>
 
