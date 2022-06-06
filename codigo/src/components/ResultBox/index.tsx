@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Plant } from '../../services/api';
+import { getImage } from '../../utils/getImage';
 
 import './styles.css';
 
@@ -9,8 +10,13 @@ interface ResultBoxProps {
 
 export function ResultBox({ plant }: ResultBoxProps) {
   return (
-    <Link to={`/plants/${plant.NomeComum}`} className="result-box">
-      <div className="image" />
+    <Link
+      to={`/plants/${plant.NomeComum}`}
+      state={{ prevPath: (location.pathname+location.search) }}
+      className="result-box"
+    >
+      <img src={getImage(plant.NomeComum)} alt={plant.NomeComum} className="image" />
+
       <h2>{plant.NomeComum}</h2>
     </Link>
   );

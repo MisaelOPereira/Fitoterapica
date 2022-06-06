@@ -21,6 +21,7 @@ interface User {
 export interface Plant {
   NomeComum: string;
   PlantId: string;
+  ImagemURL: string;
   OutrosNomesComuns: string[];
   NomeCientífico: string;
   AçãoSobreOCorpo: {

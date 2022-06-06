@@ -26,24 +26,26 @@
   align-items: center;
 }
 
-.plant-header > a {
+.plant-header > button {
   height: 50px;
   width: 50px;
-  border-radius: 50%;
   color: #5f5f5f;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
   margin-right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 
-.plant-header > a:hover {
+.plant-header > button:hover {
   background: rgba(220, 99, 107, 0.342);
 }
 
-.plant-header > a > svg {
+.plant-header > button > svg {
   height: 30px;
   width: 30px;
 }
@@ -105,6 +107,21 @@
 
 .plant-container > .references + p {
   margin-bottom: 10px;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  height: 30px;
+  width: 30px;
+  margin: 120px auto;
+  animation: rotating 1s linear infinite;
 }
 
 @media(max-width: 1000px) {
