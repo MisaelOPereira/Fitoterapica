@@ -9,7 +9,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 * Leonardo Maia Assis Oliveira
 * Misael Oliveira Pereira
 * Pedro Henrique Alves de Souza
-* Raphael Henrique Oliveira Santos
+
 
 ## Professores responsáveis
 
