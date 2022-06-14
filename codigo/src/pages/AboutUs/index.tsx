@@ -53,10 +53,10 @@ export function AboutUs() {
       hibisco!.style.bottom = 70 + incrementer * 0.08 + '%'
       hibisco!.style.left = 20 + incrementer * -0.08 + '%'
       cha!.style.bottom = 50 + incrementer * 0.1 + '%'
-      cha!.style.left = 60 + incrementer * 0.08 + '%'
-      molecula!.style.left = 5 + incrementer * -0.15 + '%'
-      earth!.style.left = 13 + incrementer * -0.12 + '%'
-      heart!.style.left = 22 + incrementer * -0.07 + '%'
+      cha!.style.left = 65 + incrementer * 0.08 + '%'
+      molecula!.style.left = 5 + incrementer * -0.2 + '%'
+      earth!.style.left = 20 + incrementer * -0.18 + '%'
+      heart!.style.left = 40 + incrementer * -0.12 + '%'
     }
   }
   

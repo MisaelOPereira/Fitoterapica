@@ -28,27 +28,27 @@
 
 #girassol {
   width: 150px;
-  bottom: 60%;
+  bottom: 70%;
   left: 75%;
 }
 
 #lavanda{
   width: 150px;
-  bottom: 40%;
+  bottom: 60%;
   left: 0%;
 }
 
 #hibisco {
   width: 150px;
-  bottom: 60%;
+  bottom: 70%;
   margin-right: 40%;
-  left: 15%;
+  left: 20%;
 }
 
 #cha {
   width: 150px;
-  bottom: 60%;
-  left: 60%;
+  bottom: 50%;
+  left: 65%;
 }
 
 #molecula {
@@ -159,6 +159,44 @@
     font-size: 26px;
     text-align: start;
   }
+
+  #camomila {
+    width: 110px;
+  }
+  
+  #girassol {
+    width: 110px;
+  }
+  
+  #lavanda{
+    width: 110px;
+  }
+  
+  #hibisco {
+    width: 110px;
+  }
+  
+  #cha {
+    width: 110px;
+  }
+  
+  #molecula {
+    width: 110px;
+  }
+  
+  #earth {
+    width: 110px;
+    left: 20%;
+  }
+  
+  #heart {
+    width: 80px;
+    left: 40%;
+  }
+  
+  #logo {
+    width: 250px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -168,10 +206,42 @@
   }
 
   .animated {
-    height: calc(100vh - 131px);
+    height: calc(100vh - 200px);
   }
 
+  #camomila {
+    width: 80px;
+  }
+  
+  #girassol {
+    width: 80px;
+  }
+  
+  #lavanda{
+    width: 80px;
+  }
+  
+  #hibisco {
+    width: 80px;
+  }
+  
+  #cha {
+    width: 80px;
+  }
+  
+  #molecula {
+    width: 60px;
+  }
+  
+  #earth {
+    width: 60px;
+  }
+  
   #heart {
-    bottom: 0px;
+    width: 60px;
+  }
+  
+  #logo {
+    width: 200px;
   }
 }
