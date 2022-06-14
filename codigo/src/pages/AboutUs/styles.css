@@ -1,0 +1,177 @@
+.aboutus-page {
+  height: 100%;
+  width: 100vw;
+  overflow: auto;
+}
+
+.animated {
+  overflow-x: hidden;
+  position: relative;
+  background-image: linear-gradient( #FF8E7B, #F6D19C);
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+
+.animated img {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+#camomila {
+  width: 150px;
+  bottom: 40%;
+  left: 85%;
+}
+
+#girassol {
+  width: 150px;
+  bottom: 60%;
+  left: 75%;
+}
+
+#lavanda{
+  width: 150px;
+  bottom: 40%;
+  left: 0%;
+}
+
+#hibisco {
+  width: 150px;
+  bottom: 60%;
+  margin-right: 40%;
+  left: 15%;
+}
+
+#cha {
+  width: 150px;
+  bottom: 60%;
+  left: 60%;
+}
+
+#molecula {
+  width: 100px;
+  bottom: 5%;
+  left: 1%;
+}
+
+#earth {
+  width: 100px;
+  bottom: 5%;
+  left: 10%;
+}
+
+#heart {
+  width: 100px;
+  bottom: 5%;
+  left: 20%;
+}
+
+#logo {
+  width: 250px;
+  bottom: 20%;
+}
+
+.about-us {
+  background-color: #F6D19C;
+  padding: 20px;
+  display: block;
+  justify-content: center;
+  
+}
+
+.delimitation {
+  width: 100%;
+  max-width: calc(min(100%, 1000px));
+  margin: 0 auto;
+}
+
+.pilares {
+  width: 100%;
+  max-width: calc(min(100%, 1100px));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pilares > div {
+  flex: 1;
+  margin-top: 30px;
+}
+
+.card {
+  min-height: 340px;
+  width: 25%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid black;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.card img {
+  width: 150px;
+}
+
+.about-us h1 {
+  color: #475326;
+  font-family: 'Inter', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.delimitation p,
+.delimitation span {
+  color: #475326;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  text-align: justify;
+}
+
+
+@media (max-width: 1000px){
+    .card {
+      width: 90%;
+    }
+    .pilares {
+      flex-direction: column;
+    }
+}
+
+@media (max-width: 700px) {
+  .about-us h1 {
+    color: #475326;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .delimitation p,
+  .delimitation span {
+    font-size: 26px;
+    text-align: start;
+  }
+}
+
+@media (max-width: 500px) {
+  .delimitation p,
+  .delimitation span {
+    font-size: 20px;
+  }
+
+  .animated {
+    height: calc(100vh - 131px);
+  }
+
+  #heart {
+    bottom: 0px;
+  }
+}

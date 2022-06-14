@@ -5,9 +5,3 @@
   align-items: center;
   padding-top: 70px;
 }
-
-@media (max-width: 500px) {
-  .layout > main {
-    height: 100%;
-  }
-}
