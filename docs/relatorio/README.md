@@ -19,7 +19,6 @@
 
 ......  Pedro Henrique Alves de Souza  ......
 
-......  Raphael Henrique Oliveira Santos  ......
 
 
 # Estrutura do Documento
