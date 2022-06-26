@@ -1,6 +1,16 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7590966&assignment_repo_type=AssignmentRepo)
 # Fitoterápica
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+
+A Fitoterápica traz como objetivos gerais:
+
+- Garantir o acesso às informações sobre plantas medicinais;
+- Garantia de confiabilidade no acesso de informação;
+- Preservação do conhecimento medicinal tradicional;
+
+E como objetivos específicos:
+- Democratização do conhecimento científico e tradicional de plantas medicinais;
+- Fomento do uso de fitoterápicos de forma segura;
+- Renovação na apresentação das informações de plantas medicinais;
+
 
 ## Alunos integrantes da equipe
 
@@ -17,4 +27,5 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+- [Video da solução final](https://drive.google.com/file/d/1BJo9mF2XRnFFXqzgKCDjdB2eW-YIpr0J/view?usp=sharing)
+- [Link do Site](https://fitoterapica.vercel.app/)
