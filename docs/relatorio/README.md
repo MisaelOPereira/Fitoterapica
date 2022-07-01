@@ -254,87 +254,313 @@ nela. No final do projeto, a develop, após a revisão de código, será fundida
 
 
 # Projeto da Solução
-
-......  COLOQUE AQUI O SEU TEXTO ......
+Na solução, foram trabalhadas arquiteturas de implementação e disponibilização
+de código na web pelo Versel e Heroku. Na plataforma Versel, realizou-se o deploy do
+código em React implementado com a solução em JSON onde foram armazenadas todas
+as plantas cadastradas e os usuários que acessam a solução. O deployment do JSON foi
+realizado na plataforma Heroku, onde a comunicação se estabeleceu através do endpoint
+gerado pela plataforma através do JSON-SERVER.
 
 ## Tecnologias Utilizadas
 
-......  COLOQUE AQUI O SEU TEXTO ......
+O projeto de interface tem por objetivo criar um protótipo da solução final, a fim de traçar metas e objetivos que devem ser alcançadas em até um determinado tempo, este esboço também pode ser usado em apresentações iniciais para fidelizar clientes e captar stakeholders.  
+Para criar um protótipo de baixa fidelidade, se tratando de aplicações Web, existem muitas ferramentas e soluções disponíveis na internet. O software escolhido para realizar tal tarefa foi o Figma, que possui uma versão gratuita,  as telas de User Flow podem ser visualizadas no link a seguir: https://www.figma.com/proto/1HQIPyMGnSMhmf5nOxpnkh/Projeto-de-interface?node-id=1%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A2
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
+Além disso, contamos com as ferramentas de edição de código VS CODE, bibliotecas de javascirpt o React JS, ferramentas de organização de times Trello, ferramentas de reuniões Microsoft Teams e ferramentas de controle de versionamento GIT e repositório remoto GITHUB;
+
 
 ## Arquitetura da solução
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
 
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-> 
-> **Exemplo do diagrama de Arquitetura**:
-> 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
-
+Na solução, foram trabalhadas arquiteturas de implementação e disponibilização
+de código na web pelo Versel e Heroku. Na plataforma Versel, realizou-se o deploy do
+código em React implementado com a solução em JSON onde foram armazenadas todas
+as plantas cadastradas e os usuários que acessam a solução. O deployment do JSON foi
+realizado na plataforma Heroku, onde a comunicação se estabeleceu através do endpoint
+gerado pela plataforma através do JSON-SERVER. Na imagem a seguir, pode-se
+observar a arquitetura da solução:
+![Arqutetura drawio](https://user-images.githubusercontent.com/86787664/176811344-30640862-9b93-44c6-ac7b-af839ac1cafc.png)
+Na solução implementamos os módulos seguintes:
+● Navegador: Local onde a visualização da interface é possibilitada;
+○ Páginas Web: Estruturação básica onde a visualização da interface é
+construída. Nossa aplicação se baseia em HTML, CSS e Javascript
+orientados pela biblioteca de javascript React;
+○ JSON-SERVER: Local onde foram armazenadas nossa base de dados em
+plantas medicinais e usuários que se cadastram na plataforma, sendo eles:
+■ Plantas Medicinais: toda a base de dados em que foram salvas as
+plantas utilizadas no trabalho;
+■ Login e Senha: informações pessoais do usuário para utilização de
+acesso a plataforma;
+■ Plantas Favoritas: Plantas que os usuários salvam como favoritas em
+seus perfis;
+● Hospedagem: A página foi mantida em duas implementações, a base de dados foi
+implementada na plataforma Heroku e o site disponibilizado no Versel;
+5.1.1. Hospedagem
+A hospedagem foi mantida no Versel disponível no link:
+https://fitoterapica.vercel.app/
+O código json está disponível no Heroku:
+18
+https://fitoterapica-api.herokuapp.com
+A implementação é baseada no código disponibilizado no GitHub:
+https://github.com/PBE-TIAW-2022-1/tiaw-pbe-20221-MisaelOPereira
 
 # Avaliação da Aplicação
 
-......  COLOQUE AQUI O SEU TEXTO ......
 
-> Apresente os cenários de testes utilizados na realização dos testes da
-> sua aplicação. Escolha cenários de testes que demonstrem os requisitos
-> sendo satisfeitos.
 
 ## Plano de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Para que os seguintes testes de software sejam executados é necessário ter os seguintes requisitos:
+Acessar o site <https://fitoterapica.vercel.app/>;
+Uma boa conexão de internet;
+Navegador de preferência Chrome; 
 
-> Enumere quais cenários de testes foram selecionados para teste. Neste
-> tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo
-> de usuários que foi escolhido para participar do teste e as
-> ferramentas utilizadas.
-> 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+Caso de Teste
+CT-01 - Filtro por nomes
+Requisitos Associados
+RF-01 - Filtrar consulta de plantas por nome.
+Objetivo do Teste
+Verificar se o componente de filtros por nome está funcionando
+Passos
+1) Acessar o Navegador
+2) Informar o endereço do Site
+3) Preencher o campo “Nome da planta” com algum nome
+4) Verificar se ao apertar “Pesquisar” gera resultado
+Critérios de Êxito
+O navegador deve ser redirecionado para a página de “results”, contendo a planta informada ou um aviso de planta não cadastrada;
 
-## Ferramentas de Testes (Opcional)
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Caso de Teste
+CT-02 - Filtro por ultilidades
+Requisitos Associados
+RF-02 - Filtrar consulta de plantas por utilidade.
+Objetivo do Teste
+Verificar se o componente de filtros por ultilidades está funcionando
+Passos
+1) Acessar o Navegador;
+2) Informar o endereço do Site;
+3) Preencher o campo "Utilidades" com alguma tag disponível;
+4) Verificar se ao apertar “Pesquisar” gera resultado;
+Critérios de Êxito
+O navegador deve ser redirecionado para a página de “results”, contendo todas as plantas que apresente usos de acordo com a tag informada;  
 
-> Comente sobre as ferramentas de testes utilizadas.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+
+
+Caso de Teste
+CT-03 - Visualizar alerta
+Requisitos Associados
+RF-10 - Exibir alerta reforçando a não recomendação do uso das plantas a cada 24h.
+Objetivo do Teste
+Verificar se o componente de alerta está funcionando.
+Passos
+1) Acessar o Navegador, aba ânima
+2) Informar o endereço do Site
+3) Visualizar pop up
+Critérios de Êxito
+O site deverá mostrar um pop up, informando que este é apenas informativo.
+
+
+Caso de Teste
+CT-04 - Filtro por região
+Requisitos Associados
+RF-03 - Filtrar consulta de plantas por região.
+Objetivo do Teste
+Verificar se o componente de filtros por região está funcionando
+Passos
+1) Acessar o Navegador;
+2) Informar o endereço do Site;
+3) Preencher o campo "Região" com alguma tag disponível;
+4) Verificar se ao apertar “Pesquisar” gera resultado;
+Critérios de Êxito
+O navegador deve ser redirecionado para a página de “results”, contendo todas as plantas estão na região informada;
+
+
+Caso de Teste
+CT-05 - Realizar novo cadastro
+Requisitos Associados
+RF-04 - Realizar cadastro de usuário.
+Objetivo do Teste
+Verificar se o site é capaz de realizar novos cadastros de usuários.
+Passos
+1) Acessar o Navegador;
+2) Informar o endereço do Site;
+3) Apertar no componente “Cadastrar”;
+4) Informar as informações solicitadas;
+5) Apertar em cadastrar
+Critérios de Êxito
+ O nova conta deve ser logada imediatamente, e aparecer no lugar onde estava o componente “Cadastrar”;
+
+
+
+
+Caso de Teste
+CT-06 - Efetuar Login
+Requisitos Associados
+RF-04 - Realizar cadastro de usuário.
+RF-05 - Realizar login de usuário.
+Objetivo do Teste
+Verificar se o login de usuários está funcionando
+Passos
+1) Acessar o Navegador;
+2) Informar o endereço do Site;
+3) Apertar no componente “Entrar”; 
+4) Informar o email e a senha previamente cadastrada;
+Critérios de Êxito
+O nova conta deve ser logada imediatamente, e aparecer no lugar onde estava o componente “Entrar”;
+
+
+Caso de Teste
+CT-07 - Efetuar logout
+Requisitos Associados
+RF-04 - Realizar cadastro de usuário.
+RF-05 - Realizar login de usuário.
+RF-06 - Realizar logout de usuário.
+Objetivo do Teste
+Verificar se é possível realizar o logout
+Passos
+1) Acessar o Navegador;
+2) Informar o endereço do Site;
+3) Apertar no seu nome no canto superior direito;
+4) Apertar no símbolo com uma porta e uma seta para fora;
+Critérios de Êxito
+O site deverá efetuar o logout da conta, e voltar a aparecer os componentes “Entrar” e “Cadastrar”.
+
+
+Caso de Teste
+CT-08 - Deletar conta
+Requisitos Associados
+RF-04 - Realizar cadastro de usuário.
+RF-05 - Realizar login de usuário.
+RF-06 - Realizar logout de usuário.
+Objetivo do Teste
+Verificar se é possível deletar a conta
+Passos
+1) Acessar o Navegador;
+2) Informar o endereço do Site;
+3) Apertar no seu nome no canto superior direito;
+4) Apertar no componente “DELETAR CONTA”;
+Critérios de Êxito
+O site deverá efetuar o cancelamento da conta, e voltar a aparecer os componentes “Entrar” e “Cadastrar”.
+
+
+Caso de Teste
+CT-09 - Visualizar dados
+Requisitos Associados
+RNF-03 - Os dados devem ser servidos ao front-end por meio do JSON Server.
+Objetivo do Teste
+Verificar se o site está comunicando com o JSON Server
+Passos
+1) Acessar o Navegador;
+2) Informar o endereço do Site;
+3) Clicar em “Pesquisar”;
+4) Clicar na primeira planta;
+Critérios de Êxito
+O navegador deve exibir as informações da planta clicada.
+
+
+Caso de Teste
+CT-10 - Visualizar o TypeScript
+Requisitos Associados
+RNF-01 - O desenvolvimento deve ser feito com a linguagem TypeScript
+Objetivo do Teste
+Verificar se o requisito não funcional está sendo atingido.
+Passos
+1) Acessar o Navegador
+2) Ir para o código fonte do site <https://github.com/PBE-TIAW-2022-1/tiaw-pbe-20221-MisaelOPereira/blob/master/codigo/src/pages/Plants/index.tsx>
+Critérios de Êxito
+O arquivo apresentado deve escrito em TypeScript
 
 ## Registros de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Abaixo é possível visualizar as imagens e o status de cada um dos testes de Software.
 
-> Discorra sobre os resultados do teste. Ressaltando pontos fortes e
-> fracos identificados na solução. Comente como o grupo pretende atacar
-> esses pontos nas próximas iterações. Apresente as falhas detectadas e
-> as melhorias geradas a partir dos resultados obtidos nos testes.
+Caso de Teste
+CT-01 - Filtro por nomes
+Imagem do resultado
+![filtro nomes](https://user-images.githubusercontent.com/86787664/176812942-fd5cf5f9-12e9-40bc-9499-2b80628a4366.png)
+![filtro por nomes](https://user-images.githubusercontent.com/86787664/176812949-cbb52aa6-0587-4a38-99a8-e8c0b9500be0.png)
+Status do teste
+Foi possível concluir o teste com êxito.
+
+
+Caso de Teste
+CT-02 - Filtro por ultilidades
+Imagem do resultado
+![filtro utilidades2](https://user-images.githubusercontent.com/86787664/176812995-66e60b44-8cbf-4845-a220-edcf14eba6ea.png)
+![filtro utilidades](https://user-images.githubusercontent.com/86787664/176812998-7bb51555-885b-4145-844c-fbc4dd08d6b1.png)
+
+Status do teste
+Foi possível concluir o teste com êxito.
+
+
+Caso de Teste
+CT-03 - Visualizar alerta
+Imagem do resultado
+![alerta](https://user-images.githubusercontent.com/86787664/176813012-c3bda638-bcde-4b6f-b35d-b088906873d1.png)
+Status do teste
+Foi possível concluir o teste com êxito.
+
+
+Caso de Teste
+CT-04 - Filtro por região
+Imagem do resultado
+![pesquisa nome regiao](https://user-images.githubusercontent.com/86787664/176813035-15ee03fa-4268-4195-8110-ca373e80c731.png)
+![pesquisa nome](https://user-images.githubusercontent.com/86787664/176813038-e754d6fd-d891-408c-ac5f-e0e5a443d963.png)
+Status do teste
+Foi possível concluir o teste com êxito.
+
+
+Caso de Teste
+CT-05 - Realizar novo cadastro
+Imagem do resultado
+![cadastro](https://user-images.githubusercontent.com/86787664/176813067-5f79ecb0-1fe3-4ab1-81f0-b8f4d18bc45b.png)
+![cadastro2](https://user-images.githubusercontent.com/86787664/176813070-afb20cfe-395e-4529-8c0a-011c3ad67ffa.png)
+
+Status do teste
+Foi possível concluir o teste com êxito.
+
+
+Caso de Teste
+CT-06 - Efetuar Login
+Imagem do resultado
+![imagens](https://user-images.githubusercontent.com/86787664/176813077-5e5b4894-a3e5-4789-977d-468173790d7f.png)
+
+Status do teste
+Foi possível concluir o teste com êxito.
+
+
+Caso de Teste
+CT-08 - Deletar conta
+Imagem do resultado
+![plant fav](https://user-images.githubusercontent.com/86787664/176813115-4543a4ac-edd7-4a5c-8dc9-e4f2df75142e.png)
+Status do teste
+Foi possível concluir o teste com êxito.
+
+
+Caso de Teste
+CT-09 - Visualizar dados
+Imagem do ![visualidar dados](https://user-images.githubusercontent.com/86787664/176813159-a6bdd7bd-e443-4954-8afc-ed5ddde05a61.png)
+resultado
+
+Status do teste
+Foi possível concluir o teste com êxito.
+
+
+Caso de Teste
+CT-10 - Visualizar o TypeScript
+Imagem do resultado
+![type](https://user-images.githubusercontent.com/86787664/176813165-2b978cf1-d84e-4006-b26f-34d7d12e20ef.png)
+
+Status do teste
+Foi possível concluir o teste com êxito
+
 
 
 # Referências
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados
-> no desenvolvimento do trabalho.
-> 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+GitHub: https://github.com
+Trello: https://trello.com
+Kanban: https://kanbanize.com/pt/recursos-kanban/primeiros-passos/o-que-e-kanban
+Plantas Medicinais Do Sus: https://avasus.ufrn.br/course/view.php?id=149 e
+https://avasus.ufrn.br/course/view.php?id=153
+Livro da Farmacopéia Brasileira:
+https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/farmacopeia-brasileira
